@@ -1,11 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react';
+const Context = React.createContext();
 
-export default function Context() {
-
+export default function ContextProvider(props) {
+ 
     return (
         <div>
-            <h1>Popular song</h1>
+            <Context.Provider value={""}>
+                {props.children}
+            </Context.Provider>
         </div>
     )
 }
+
+export { ContextProvider, Context }
 

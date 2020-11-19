@@ -1,0 +1,16 @@
+body {
+    margin: auto;
+}
+.navigation {
+    display: flex;
+}
+form {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.add-button {
+    max-width: 210px;
+}
+
+/*# sourceMappingURL=/css.967bad95.css.map */

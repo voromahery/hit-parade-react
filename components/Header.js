@@ -5,7 +5,7 @@ function Header() {
     return (
         <div>
             <h1>Hit Parade</h1>
-            <div>
+            <div className="navigation">
                 <Link to="/">
                     <h3>Popular songs</h3>
                 </Link>
