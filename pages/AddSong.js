@@ -17,6 +17,7 @@ function AddSong() {
             id: Date.now(),
             scoreUp: 0,
             scoreDown: 0,
+            favorite: false,
 
         }
 

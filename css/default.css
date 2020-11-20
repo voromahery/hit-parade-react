@@ -12,6 +12,10 @@ ul {
     margin: auto;
 }
 
-.style {
+ul .style {
     font-size: 32px;
+}
+
+.favorite {
+    cursor: pointer;
 }

@@ -24,8 +24,6 @@ function SongsList() {
         }
     }
 
-    console.log(upScore, downScore);
-
     return (
         <div className="card-container">
             {sortByScore.map((song) => (

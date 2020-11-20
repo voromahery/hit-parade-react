@@ -33883,37 +33883,35 @@ function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"pages/SongStyle.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"songData.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function SongStyle() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", {
-    className: "style"
-  }, "Soul"), /*#__PURE__*/_react.default.createElement("li", {
-    className: "style"
-  }, "Rock"), /*#__PURE__*/_react.default.createElement("li", {
-    className: "style"
-  }, "Rap"), /*#__PURE__*/_react.default.createElement("li", {
-    className: "style"
-  }, "Slow"), /*#__PURE__*/_react.default.createElement("li", {
-    className: "style"
-  }, "Afrotrap"), /*#__PURE__*/_react.default.createElement("li", {
-    className: "style"
-  }, "Kawitry")));
-}
-
-var _default = SongStyle;
+var data = [{
+  id: 62462462876,
+  title: "Lionne",
+  artist: "Dadju",
+  style: "soul",
+  scoreUp: 2,
+  scoreDown: 0,
+  lyric: "\n        Lionne\nOh oh ah\nUn peu de respect, faut respecter\nQuand une lionne arrive \xE0 tout g\xE9rer\nUn de perdu, mais elle s'est retrouver\nPas besoin d'un homme qui l'emp\xEAche d'avancer\nElle a ses r\xE8gles, et sa fiert\xE9\nC'est pas elle que tu verras mendier\nC\xE9libataire ou femme mari\xE9e\n\xC7a change \xE0 rien sa fa\xE7on de penser\nFort caract\xE8re, elle sait dire non\nElle dit jamais sont dernier mot\nEt tu peux lire sous ces paupi\xE8res \"d\xE9termin\xE9e\"\nElle agit, elle ne parle pas, lionne affam\xE9e\nSi tu lui donnes la mis\xE8re du monde\nElle va tout assumer\nSi tu lui donnes la richesse d'un homme\nElle va tout assumer\nElle mettra toujours la famille d'abord\nElle va tout assumer\nLe genre de femme qui \xE0 chaque probl\xE8me s'en sort\nElle va tout assumer, lionne\nAh, lionne\nCours ma lionne\nAh, lionne\nSois pas na\xEFf\nLa Khaleesie sait tr\xE8s bien comment g\xE9rer sa vie\nCharismatique, elle est sexy\nElle prend soin d'elle malgr\xE9 tous les soucis\nElle prend des risques elle r\xE9fl\xE9chit\nPas besoin de t'd'mander ton avis\nSon objectif, la r\xE9ussite\nSon amour conna\xEEt pas de limite\nFort caract\xE8re, elle sait dire non\nElle dit jamais sont dernier mot\nEt tu peux lire sous ses paupi\xE8res \"d\xE9termin\xE9e\"\nElle agit, elle ne parle pas, lionne affam\xE9e\nSi tu lui donnes la mis\xE8re du monde\nElle va tout assumer\nSi tu lui donnes la richesse d'un homme\nElle va tout assumer\nElle mettra toujours la famille d'abord\nElle va tout assumer\nLe genre de femme qui \xE0 chaque probl\xE8me s'en sort\nElle va tout assumer, lionne\nAh, lionne\nCours ma lionne\nAh, lionne\nElle veut tout assumer, assumer (tout assumer)\nTout assumer, assumer (tout assumer)\nEt toutes les fois o\xF9 elle aurait pu tomber\nElle a jamais pens\xE9 qu'elle pouvait pas y arriver\nAh, lionne\nCours ma lionne\nAh, lionne\nTout assumer, assumer\nTout assumer, assumer\nElle veut tout assumer, tout assumer\nTout assumer, tout assumer\nOh oh ah\n        ",
+  favorite: true
+}, {
+  id: 9999998690,
+  title: "Beau parleur",
+  artist: "Keblack",
+  style: "slow",
+  scoreUp: 2,
+  scoreDown: 0,
+  lyric: "\n        Djazzi la prod ne t'appartient pas\nLui il nie en bloc\nM\xEAme quand tu l'as grill\xE9, \"c'est pas moi, c'est mes potes!\"\nMais toi tu l'as grill\xE9 (aah)\nC'est le roi de la soir\xE9e\nAttaquant comme Suarez\nLe roi des enfoir\xE9s\nLa pire des esp\xE8ces\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\nJ'te dis l'amour c'est dur, y a des blessures\nAvec son ex, il a trop souffert\nIl connait la proc\xE9dure, il sait y faire\nIl te fera tomber dans son univers\nIl sait qu'il est beau, qu'il est fantastique\nEn soir\xE9e il g\xE8re toutes les gows\nC'est un gars de la street\nEt \xE7a il faut y rem\xE9dier, il en a fait son m\xE9tier\nEt \xE7a il faut y rem\xE9dier, la bataille sera sans r\xE9pit\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\nC'est vraiment une ordure, pr\xEAt \xE0 te trahir\nIl te veut dans son lit et puis c'est fini\nOui c'est vraiment une ordure, dragueur aguerri\nMilitaire dangereux mais sans le treillis\nPour lui c'est une \xE9vidence, une longueur d'avance\nIl fera le mec fragile\nAvec toi \xE7a prend pas, non mais avouez qu'il est agile\nC'est un Casanova, il faut qu'il innove\nSinon il finira game-over\nEn tant que un Casanova, il faut qu'il innove\nNan il est mauvais\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\nC'est trop tard, oui mon gars c'est trop tard\nT'es qu'un beau parleur mais t'as grill\xE9 la main dans le sac, bah ouais\nMais il est trop tard\nT'es qu'un beau parleur\nIl est trop tard, elle t'a mis game-over\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\n        ",
+  favorite: false
+}];
+var _default = data;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"Context.js":[function(require,module,exports) {
+},{}],"Context.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33923,6 +33921,10 @@ exports.ContextProvider = exports.default = ContextProvider;
 exports.Context = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _songData = _interopRequireDefault(require("./songData"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
@@ -33950,14 +33952,74 @@ function ContextProvider(props) {
       songs = _useState2[0],
       setSongs = _useState2[1];
 
+  var _useState3 = (0, _react.useState)(false),
+      _useState4 = _slicedToArray(_useState3, 2),
+      isFavorite = _useState4[0],
+      setIsFavorite = _useState4[1];
+
+  var _useState5 = (0, _react.useState)([]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      songStyle = _useState6[0],
+      setSongStyle = _useState6[1];
+
+  function songsDATA() {
+    setSongs(_songData.default); // setSongStyle([{style: data.style}]);
+  }
+
+  function favorited() {
+    setIsFavorite(true);
+    console.log('favorite');
+  }
+
+  (0, _react.useEffect)(function () {
+    songsDATA();
+  }, []);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
       songs: songs,
-      setSongs: setSongs
+      setSongs: setSongs,
+      songStyle: songStyle,
+      setSongStyle: setSongStyle,
+      isFavorite: isFavorite,
+      setIsFavorite: setIsFavorite,
+      favorited: favorited
     }
   }, props.children));
 }
-},{"react":"node_modules/react/index.js"}],"pages/AddSong.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./songData":"songData.js"}],"pages/SongStyle.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Context = require("../Context");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function SongStyle() {
+  var _useContext = (0, _react.useContext)(_Context.Context),
+      songs = _useContext.songs;
+
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, songs.map(function (style, index) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: index
+    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "./style/".concat(style.style)
+    }, /*#__PURE__*/_react.default.createElement("li", null, style.style)));
+  })));
+}
+
+var _default = SongStyle;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Context":"Context.js"}],"pages/AddSong.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34001,7 +34063,8 @@ function AddSong() {
       lyric: form.lyric.value,
       id: Date.now(),
       scoreUp: 0,
-      scoreDown: 0
+      scoreDown: 0,
+      favorite: false
     };
     setSongs([].concat(_toConsumableArray(songs), [newSongs]));
   }
@@ -34048,7 +34111,11 @@ function AddSong() {
 
 var _default = AddSong;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../Context.js":"Context.js"}],"components/Songs.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context.js":"Context.js"}],"icons/favorite-fill.svg":[function(require,module,exports) {
+module.exports = "/favorite-fill.ee79710d.svg";
+},{}],"icons/favorite-line.svg":[function(require,module,exports) {
+module.exports = "/favorite-line.fe2f29bc.svg";
+},{}],"components/Songs.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34058,6 +34125,14 @@ exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
+var _Context = require("../Context");
+
+var _favoriteFill = _interopRequireDefault(require("../icons/favorite-fill.svg"));
+
+var _favoriteLine = _interopRequireDefault(require("../icons/favorite-line.svg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -34066,20 +34141,42 @@ function Songs(_ref) {
   var song = _ref.song,
       removeScore = _ref.removeScore,
       addScore = _ref.addScore;
+
+  var _useContext = (0, _react.useContext)(_Context.Context),
+      favorited = _useContext.favorited;
+
+  function addHeartIcon() {
+    if (song.favorite) {
+      return /*#__PURE__*/_react.default.createElement("img", {
+        src: _favoriteFill.default,
+        className: "favorite",
+        alt: "",
+        onClick: favorited
+      });
+    } else {
+      return /*#__PURE__*/_react.default.createElement("img", {
+        src: _favoriteLine.default,
+        className: "favorite",
+        alt: "",
+        onClick: favorited
+      });
+    }
+  }
+
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "card"
-  }, /*#__PURE__*/_react.default.createElement("span", null), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)), /*#__PURE__*/_react.default.createElement("span", null, song.scoreUp, /*#__PURE__*/_react.default.createElement("button", {
+  }, addHeartIcon(), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)), /*#__PURE__*/_react.default.createElement("span", null, song.scoreUp, /*#__PURE__*/_react.default.createElement("button", {
     onClick: addScore,
     id: song.id
   }, "Add")), /*#__PURE__*/_react.default.createElement("span", null, song.scoreDown, /*#__PURE__*/_react.default.createElement("button", {
     onClick: removeScore,
     id: song.id
-  }, "remove")), /*#__PURE__*/_react.default.createElement("span", null, "Cart"), /*#__PURE__*/_react.default.createElement("p", null, song.lyric)));
+  }, "remove")), /*#__PURE__*/_react.default.createElement("span", null, "Cart"), /*#__PURE__*/_react.default.createElement("p", null, "Lyric")));
 }
 
 var _default = Songs;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"pages/SongsList.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context":"Context.js","../icons/favorite-fill.svg":"icons/favorite-fill.svg","../icons/favorite-line.svg":"icons/favorite-line.svg"}],"pages/SongsList.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34151,7 +34248,6 @@ function SongsList() {
     }
   }
 
-  console.log(upScore, downScore);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "card-container"
   }, sortByScore.map(function (song) {
@@ -34184,7 +34280,40 @@ function CartSong() {
 
 var _default = CartSong;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"pages/Music.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Context = require("../Context.js");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function Music() {
+  var _useContext = (0, _react.useContext)(_Context.Context),
+      songs = _useContext.songs;
+
+  var _useParams = (0, _reactRouterDom.useParams)(),
+      id = _useParams.id;
+
+  var musics = songs.find(function (music) {
+    return music.id === Number(id);
+  });
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, id));
+}
+
+var _default = Music;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Context.js":"Context.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34206,6 +34335,8 @@ var _SongsList = _interopRequireDefault(require("./pages/SongsList"));
 
 var _CartSong = _interopRequireDefault(require("./pages/CartSong"));
 
+var _Music = _interopRequireDefault(require("./pages/Music"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
@@ -34218,12 +34349,14 @@ function App() {
     path: "/add"
   }, /*#__PURE__*/_react.default.createElement(_AddSong.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/cart"
-  }, /*#__PURE__*/_react.default.createElement(_CartSong.default, null))));
+  }, /*#__PURE__*/_react.default.createElement(_CartSong.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/style/soul"
+  }, /*#__PURE__*/_react.default.createElement(_Music.default, null))));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./components/Header":"components/Header.js","./pages/SongStyle":"pages/SongStyle.js","./pages/AddSong":"pages/AddSong.js","./pages/SongsList":"pages/SongsList.js","./pages/CartSong":"pages/CartSong.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./components/Header":"components/Header.js","./pages/SongStyle":"pages/SongStyle.js","./pages/AddSong":"pages/AddSong.js","./pages/SongsList":"pages/SongsList.js","./pages/CartSong":"pages/CartSong.js","./pages/Music":"pages/Music.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -34267,7 +34400,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58238" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55703" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
