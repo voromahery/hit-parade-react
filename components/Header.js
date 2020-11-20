@@ -13,9 +13,9 @@ function Header() {
                     <h3>Styles</h3>
                 </Link>
                 <Link to="/add">
-                    <h3>Add</h3>
+                    <h3>🌚 Add</h3>
                 </Link>
-                <Link to="">
+                <Link to="/cart">
                     <h3>Cart</h3>
                 </Link>
             </div>

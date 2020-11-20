@@ -4,5 +4,14 @@ form {
 }
 
 .add-button {
+    max-height: 60px;
     max-width: 210px;
+    grid-column: 2;
+    grid-row: 1/5;
+}
+
+textarea,
+input,
+select {
+    max-width: 337.14px;
 }

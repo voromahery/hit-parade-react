@@ -4,6 +4,7 @@ import Header from './components/Header';
 import SongStyle from './pages/SongStyle';
 import AddSong from './pages/AddSong';
 import SongsList from './pages/SongsList';
+import CartSong from './pages/CartSong';
 
 function App() {
 	return (
@@ -18,6 +19,9 @@ function App() {
 				</Route>
 				<Route path="/add">
 					<AddSong />
+				</Route>
+				<Route path="/cart">
+					<CartSong />
 				</Route>
 			</Switch>
 		</div>

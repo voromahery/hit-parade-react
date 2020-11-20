@@ -1,3 +1,17 @@
 body {
     margin: auto;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#root {
+    max-width: 565px;
+    margin: auto;
+}
+
+.style {
+    font-size: 32px;
+}

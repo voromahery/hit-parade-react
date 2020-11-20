@@ -33876,8 +33876,8 @@ function Header() {
     to: "/style"
   }, /*#__PURE__*/_react.default.createElement("h3", null, "Styles")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/add"
-  }, /*#__PURE__*/_react.default.createElement("h3", null, "Add")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: ""
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "\uD83C\uDF1A Add")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/cart"
   }, /*#__PURE__*/_react.default.createElement("h3", null, "Cart"))));
 }
 
@@ -33896,7 +33896,19 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function SongStyle() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Style"));
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("li", {
+    className: "style"
+  }, "Soul"), /*#__PURE__*/_react.default.createElement("li", {
+    className: "style"
+  }, "Rock"), /*#__PURE__*/_react.default.createElement("li", {
+    className: "style"
+  }, "Rap"), /*#__PURE__*/_react.default.createElement("li", {
+    className: "style"
+  }, "Slow"), /*#__PURE__*/_react.default.createElement("li", {
+    className: "style"
+  }, "Afrotrap"), /*#__PURE__*/_react.default.createElement("li", {
+    className: "style"
+  }, "Kawitry")));
 }
 
 var _default = SongStyle;
@@ -34103,6 +34115,10 @@ function SongsList() {
   var _useContext = (0, _react.useContext)(_Context.Context),
       songs = _useContext.songs;
 
+  var sortByScore = songs.sort(function (a, b) {
+    return b.scoreUp - b.scoreDown - (a.scoreUp - a.scoreDown);
+  });
+
   var _useState = (0, _react.useState)(0),
       _useState2 = _slicedToArray(_useState, 2),
       upScore = _useState2[0],
@@ -34118,7 +34134,10 @@ function SongsList() {
     var findSong = songs.find(function (song) {
       return song.id === songId;
     });
-    setUpScore(findSong.scoreUp++);
+
+    if (findSong) {
+      setUpScore(findSong.scoreUp++);
+    }
   }
 
   function removeScore(e) {
@@ -34126,12 +34145,13 @@ function SongsList() {
     var findSong = songs.find(function (song) {
       return song.id === songId;
     });
-    setDownScore(findSong.scoreDown++);
+
+    if (findSong) {
+      setDownScore(findSong.scoreDown++);
+    }
   }
 
-  var sortByScore = songs.sort(function (a, b) {
-    return b.scoreUp - b.scoreDown - (a.scoreUp - a.scoreDown);
-  });
+  console.log(upScore, downScore);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "card-container"
   }, sortByScore.map(function (song) {
@@ -34146,7 +34166,25 @@ function SongsList() {
 
 var _default = SongsList;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../Context.js":"Context.js","./../components/Songs":"components/Songs.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context.js":"Context.js","./../components/Songs":"components/Songs.js"}],"pages/CartSong.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function CartSong() {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Add to Cart"));
+}
+
+var _default = CartSong;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34166,6 +34204,8 @@ var _AddSong = _interopRequireDefault(require("./pages/AddSong"));
 
 var _SongsList = _interopRequireDefault(require("./pages/SongsList"));
 
+var _CartSong = _interopRequireDefault(require("./pages/CartSong"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
@@ -34176,12 +34216,14 @@ function App() {
     path: "/style"
   }, /*#__PURE__*/_react.default.createElement(_SongStyle.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/add"
-  }, /*#__PURE__*/_react.default.createElement(_AddSong.default, null))));
+  }, /*#__PURE__*/_react.default.createElement(_AddSong.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/cart"
+  }, /*#__PURE__*/_react.default.createElement(_CartSong.default, null))));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./components/Header":"components/Header.js","./pages/SongStyle":"pages/SongStyle.js","./pages/AddSong":"pages/AddSong.js","./pages/SongsList":"pages/SongsList.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./components/Header":"components/Header.js","./pages/SongStyle":"pages/SongStyle.js","./pages/AddSong":"pages/AddSong.js","./pages/SongsList":"pages/SongsList.js","./pages/CartSong":"pages/CartSong.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -34225,7 +34267,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56936" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58238" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
