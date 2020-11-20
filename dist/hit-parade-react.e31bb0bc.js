@@ -33987,7 +33987,9 @@ function AddSong() {
       price: form.price.value,
       style: form.style.value,
       lyric: form.lyric.value,
-      id: Date.now()
+      id: Date.now(),
+      scoreUp: 0,
+      scoreDown: 0
     };
     setSongs([].concat(_toConsumableArray(songs), [newSongs]));
   }
@@ -34048,43 +34050,19 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 function Songs(_ref) {
   var song = _ref.song,
-      songId = _ref.songId;
-
-  var _useState = (0, _react.useState)(0),
-      _useState2 = _slicedToArray(_useState, 2),
-      score = _useState2[0],
-      setScore = _useState2[1];
-
-  function addScore() {
-    // const songId = e.target.id;
-    // const songAddScore = songs.find(song => song.id === songId);
-    setScore(function (prevScore) {
-      return prevScore + 1;
-    });
-  }
-
+      removeScore = _ref.removeScore,
+      addScore = _ref.addScore;
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "card",
-    id: songId
-  }, /*#__PURE__*/_react.default.createElement("span", null), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)), /*#__PURE__*/_react.default.createElement("span", null, score, /*#__PURE__*/_react.default.createElement("button", {
-    onClick: function onClick() {
-      return addScore(song.id);
-    }
-  }, "Add")), /*#__PURE__*/_react.default.createElement("span", null, "0", /*#__PURE__*/_react.default.createElement("button", null, "remove")), /*#__PURE__*/_react.default.createElement("span", null, "Cart"), /*#__PURE__*/_react.default.createElement("p", null, song.lyric)));
+    className: "card"
+  }, /*#__PURE__*/_react.default.createElement("span", null), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)), /*#__PURE__*/_react.default.createElement("span", null, song.scoreUp, /*#__PURE__*/_react.default.createElement("button", {
+    onClick: addScore,
+    id: song.id
+  }, "Add")), /*#__PURE__*/_react.default.createElement("span", null, song.scoreDown, /*#__PURE__*/_react.default.createElement("button", {
+    onClick: removeScore,
+    id: song.id
+  }, "remove")), /*#__PURE__*/_react.default.createElement("span", null, "Cart"), /*#__PURE__*/_react.default.createElement("p", null, song.lyric)));
 }
 
 var _default = Songs;
@@ -34109,17 +34087,59 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 function SongsList() {
   var _useContext = (0, _react.useContext)(_Context.Context),
       songs = _useContext.songs;
 
+  var _useState = (0, _react.useState)(0),
+      _useState2 = _slicedToArray(_useState, 2),
+      upScore = _useState2[0],
+      setUpScore = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(0),
+      _useState4 = _slicedToArray(_useState3, 2),
+      downScore = _useState4[0],
+      setDownScore = _useState4[1];
+
+  function addScore(e) {
+    var songId = Number(e.target.id);
+    var findSong = songs.find(function (song) {
+      return song.id === songId;
+    });
+    setUpScore(findSong.scoreUp++);
+  }
+
+  function removeScore(e) {
+    var songId = Number(e.target.id);
+    var findSong = songs.find(function (song) {
+      return song.id === songId;
+    });
+    setDownScore(findSong.scoreDown++);
+  }
+
+  var sortByScore = songs.sort(function (a, b) {
+    return b.scoreUp - b.scoreDown - (a.scoreUp - a.scoreDown);
+  });
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "card-container"
-  }, songs.map(function (song) {
+  }, sortByScore.map(function (song) {
     return /*#__PURE__*/_react.default.createElement(_Songs.default, {
-      song: song,
       key: song.id,
-      songId: song.id
+      song: song,
+      addScore: addScore,
+      removeScore: removeScore
     });
   }));
 }
@@ -34149,7 +34169,7 @@ var _SongsList = _interopRequireDefault(require("./pages/SongsList"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement("h1", null, "Home Page"), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/"
   }, /*#__PURE__*/_react.default.createElement(_SongsList.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
@@ -34205,7 +34225,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60161" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56936" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

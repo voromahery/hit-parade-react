@@ -4,14 +4,31 @@ import Songs from './../components/Songs';
 
 function SongsList() {
     const { songs } = useContext(Context);
+    const [upScore, setUpScore] = useState(0);
+    const [downScore, setDownScore] = useState(0);
+
+    function addScore(e) {
+        const songId = Number(e.target.id);
+        const findSong = songs.find(song => song.id === songId);
+        setUpScore(findSong.scoreUp++)
+    }
+
+    function removeScore(e) {
+        const songId = Number(e.target.id);
+        const findSong = songs.find(song => song.id === songId);
+        setDownScore(findSong.scoreDown++)
+    }
+
+    const sortByScore = songs.sort((a, b) => (b.scoreUp - b.scoreDown) - (a.scoreUp - a.scoreDown));
 
     return (
         <div className="card-container">
-            {songs.map((song) => (
+            {sortByScore.map((song) => (
                 <Songs
-                    song={song}
                     key={song.id}
-                    songId={song.id}
+                    song={song}
+                    addScore={addScore}
+                    removeScore={removeScore}
                 />
             )
             )}

@@ -15,6 +15,9 @@ function AddSong() {
             style: form.style.value,
             lyric: form.lyric.value,
             id: Date.now(),
+            scoreUp: 0,
+            scoreDown: 0,
+
         }
 
         setSongs([...songs, newSongs]);
