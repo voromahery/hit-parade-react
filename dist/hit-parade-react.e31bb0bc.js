@@ -33901,7 +33901,15 @@ function SongStyle() {
 
 var _default = SongStyle;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"Context.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"songs.json":[function(require,module,exports) {
+module.exports = [{
+  "artist": "Dadju",
+  "title": "Lionne"
+}, {
+  "artist": "Black M",
+  "title": "Sur ma route"
+}];
+},{}],"Context.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33911,6 +33919,10 @@ exports.ContextProvider = exports.default = ContextProvider;
 exports.Context = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _songs = _interopRequireDefault(require("./songs.json"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
@@ -33936,7 +33948,16 @@ function ContextProvider(props) {
   var _useState = (0, _react.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       songs = _useState2[0],
-      setSongs = _useState2[1];
+      setSongs = _useState2[1]; // async function songData() {
+  //     const response = await fetch(dataList);
+  //     const data = await response.json();
+  //     console.log(data);
+  //     setSongs(data);
+  // }
+  // useEffect(() => {
+  //   songData();
+  // }, [])
+
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
@@ -33945,7 +33966,7 @@ function ContextProvider(props) {
     }
   }, props.children));
 }
-},{"react":"node_modules/react/index.js"}],"pages/AddSong.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./songs.json":"songs.json"}],"pages/AddSong.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33961,6 +33982,18 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 function AddSong() {
   var _useContext = (0, _react.useContext)(_Context.Context),
       songs = _useContext.songs,
@@ -33969,17 +34002,16 @@ function AddSong() {
   function addNewSong(e) {
     e.preventDefault();
     var form = e.currentTarget;
-    console.log(form);
-    setSongs({
+    var newSongs = {
       title: form.title.value,
       artist: form.artist.value,
       price: form.price.value,
       style: form.style.value,
       lyric: form.lyric.value
-    });
+    };
+    setSongs([].concat(_toConsumableArray(songs), [newSongs]));
   }
 
-  console.log(songs);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "\uD83C\uDF1A Add a new song"), /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: addNewSong
   }, /*#__PURE__*/_react.default.createElement("input", {
@@ -34030,17 +34062,29 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _Context = require("../Context.js");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function SongsList() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Popular songs"));
+  var _useContext = (0, _react.useContext)(_Context.Context),
+      songs = _useContext.songs;
+
+  console.log(songs, "SONGS");
+  return /*#__PURE__*/_react.default.createElement("div", null, songs.map(function (song, index) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: index
+    }, /*#__PURE__*/_react.default.createElement("span", null, "\uD83D\uDC9B"), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)), /*#__PURE__*/_react.default.createElement("span", null, "0"), /*#__PURE__*/_react.default.createElement("span", null, "0"), /*#__PURE__*/_react.default.createElement("span", null, "Cart"), /*#__PURE__*/_react.default.createElement("p", null, song.lyric));
+  }));
 }
 
 var _default = SongsList;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context.js":"Context.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

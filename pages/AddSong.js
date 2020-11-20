@@ -7,16 +7,17 @@ function AddSong() {
     function addNewSong(e) {
         e.preventDefault();
         const form = e.currentTarget;
-    console.log(form);
-        setSongs({
+        const newSongs =
+        {
             title: form.title.value,
             artist: form.artist.value,
             price: form.price.value,
             style: form.style.value,
             lyric: form.lyric.value,
-        })
+        }
+
+        setSongs([...songs, newSongs]);
     }
-    console.log(songs);
 
     return (
         <div>
