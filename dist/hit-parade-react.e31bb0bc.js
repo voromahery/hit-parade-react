@@ -33901,13 +33901,14 @@ function SongStyle() {
 
 var _default = SongStyle;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"pages/AddSong.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"Context.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.ContextProvider = exports.default = ContextProvider;
+exports.Context = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -33927,20 +33928,54 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function AddSong() {
+var Context = _react.default.createContext();
+
+exports.Context = Context;
+
+function ContextProvider(props) {
   var _useState = (0, _react.useState)([]),
       _useState2 = _slicedToArray(_useState, 2),
       songs = _useState2[0],
       setSongs = _useState2[1];
 
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(Context.Provider, {
+    value: {
+      songs: songs,
+      setSongs: setSongs
+    }
+  }, props.children));
+}
+},{"react":"node_modules/react/index.js"}],"pages/AddSong.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _Context = require("../Context.js");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function AddSong() {
+  var _useContext = (0, _react.useContext)(_Context.Context),
+      songs = _useContext.songs,
+      setSongs = _useContext.setSongs;
+
   function addNewSong(e) {
     e.preventDefault();
+    var form = e.currentTarget;
+    console.log(form);
     setSongs({
-      title: "D",
-      artist: "A",
-      price: "6",
-      style: "R",
-      lyric: "fghjk"
+      title: form.title.value,
+      artist: form.artist.value,
+      price: form.price.value,
+      style: form.style.value,
+      lyric: form.lyric.value
     });
   }
 
@@ -33987,7 +34022,7 @@ function AddSong() {
 
 var _default = AddSong;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"pages/SongsList.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context.js":"Context.js"}],"pages/SongsList.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34051,10 +34086,12 @@ var _reactRouterDom = require("react-router-dom");
 
 var _App = _interopRequireDefault(require("./App"));
 
+var _Context = _interopRequireDefault(require("./Context"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_App.default, null)), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./App":"App.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_Context.default, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_App.default, null))), document.getElementById('root'));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./App":"App.js","./Context":"Context.js"}],"../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -34082,7 +34119,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58207" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60161" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

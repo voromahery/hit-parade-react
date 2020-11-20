@@ -1,16 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react';
+import { Context } from '../Context.js';
 
 function AddSong() {
-    const [songs, setSongs] = useState([]);
+    const { songs, setSongs } = useContext(Context);
 
     function addNewSong(e) {
         e.preventDefault();
+        const form = e.currentTarget;
+    console.log(form);
         setSongs({
-            title: "D",
-            artist: "A",
-            price: "6",
-            style: "R",
-            lyric: "fghjk",
+            title: form.title.value,
+            artist: form.artist.value,
+            price: form.price.value,
+            style: form.style.value,
+            lyric: form.lyric.value,
         })
     }
     console.log(songs);
