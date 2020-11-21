@@ -34272,18 +34272,16 @@ function Songs(_ref) {
     if (cartItem.some(function (cart) {
       return cart.id === song.id;
     })) {
-      console.log("YESSS");
       return /*#__PURE__*/_react.default.createElement("img", {
         src: _cartFill.default,
         className: "add-cart",
         alt: "",
         id: song.id,
         onClick: function onClick() {
-          return removeFromCart(song);
+          return removeFromCart(song.id);
         }
       });
     } else {
-      console.log("NOOOOH");
       return /*#__PURE__*/_react.default.createElement("img", {
         src: _cartLine.default,
         className: "add-cart",
@@ -34514,7 +34512,7 @@ function Lyric() {
   var songLyrics = songs.find(function (song) {
     return song.id === Number(songLyric);
   }) || _songData.default.find(function (song) {
-    return song.id === Number(songLyric) || "";
+    return song.id === Number(songLyric) || [""];
   });
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {

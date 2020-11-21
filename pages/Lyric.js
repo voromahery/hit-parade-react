@@ -6,7 +6,7 @@ import data from './../songData';
 function Lyric() {
     const { songs } = useContext(Context);
     const { songLyric } = useParams();
-    const songLyrics = songs.find(song => song.id === Number(songLyric)) || data.find(song => song.id === Number(songLyric) || "");
+    const songLyrics = songs.find(song => song.id === Number(songLyric)) || data.find(song => song.id === Number(songLyric) || [""]);
     return (
         <div>
             <div className="lyric-card">

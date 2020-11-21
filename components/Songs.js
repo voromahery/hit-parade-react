@@ -20,15 +20,13 @@ function Songs({ song, removeScore, addScore }) {
         }
     }
 
-    function addCart() {
-        if (cartItem.some(cart => cart.id === song.id)) {
-            console.log("YESSS");
-            return <img src={addCartIcon} className="add-cart" alt="" id={song.id} onClick={() => removeFromCart(song)} />
-        } else {
-            console.log("NOOOOH");
-            return <img src={cartIcon} className="add-cart" alt="" id={song.id} onClick={() => addToCart(song)} />
-        }
-    }
+     function addCart() {
+         if (cartItem.some(cart => cart.id === song.id)) {
+             return <img src={addCartIcon} className="add-cart" alt="" id={song.id} onClick={() => removeFromCart(song.id)} />
+         } else {
+             return <img src={cartIcon} className="add-cart" alt="" id={song.id} onClick={() => addToCart(song)} />
+         }
+     }
 
     return (
         <div>
