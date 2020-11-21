@@ -34089,7 +34089,7 @@ function SongStyle() {
       key: song
     }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
       to: "/style/".concat(song)
-    }, /*#__PURE__*/_react.default.createElement("div", null, song)));
+    }, /*#__PURE__*/_react.default.createElement("div", null, "\uD83C\uDFA7 ", song)));
   })));
 }
 
@@ -34559,7 +34559,7 @@ function Style() {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: song.id,
       className: "card"
-    }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)));
+    }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, "\uD83C\uDFA7 ", song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)));
   })));
 }
 

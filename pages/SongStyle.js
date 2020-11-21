@@ -13,7 +13,7 @@ function SongStyle() {
                 {style.map(song =>
                     <li key={song}>
                         <Link to={`/style/${song}`}>
-                            <div>{song}</div>
+                            <div>🎧 {song}</div>
                         </Link>
                     </li>
                 )}

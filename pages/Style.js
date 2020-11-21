@@ -14,7 +14,7 @@ function Style() {
                 {styleSong.map(song =>
                     <div key={song.id} className="card">
                         <div>
-                            <h3>{song.title}</h3>
+                            <h3>🎧 {song.title}</h3>
                             <span>{song.artist}</span>
                         </div>
                     </div>
