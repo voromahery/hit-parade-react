@@ -6,6 +6,7 @@ import AddSong from './pages/AddSong';
 import SongsList from './pages/SongsList';
 import CartSong from './pages/CartSong';
 import Music from './pages/Music';
+import Lyric from './pages/Lyric';
 
 function App() {
 	return (
@@ -25,8 +26,11 @@ function App() {
 					<CartSong />
 				</Route>
 				<Route path="/style/soul">
-						<Music />
-					</Route>
+					<Music />
+				</Route>
+				<Route path="/lyric">
+					<Lyric />
+				</Route>
 			</Switch>
 		</div>
 	)

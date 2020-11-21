@@ -6,23 +6,26 @@ import addCartIcon from '../icons/cart-fill.svg';
 import cartIcon from '../icons/cart-line.svg';
 import upIcon from '../icons/upscore.svg';
 import downIcon from '../icons/downscore.svg';
+import { Link } from 'react-router-dom';
 
 function Songs({ song, removeScore, addScore }) {
-    const { toggleFavorite, cartItem, addToCart, removeFromCart } = useContext(Context)
+    const { toggleFavorite, cartItem, addToCart, removeFromCart } = useContext(Context);
 
     function addHeartIcon() {
         if (song.favorite) {
-            return <img src={favoriteIcon} className="favorite" alt="" onClick={() => toggleFavorite(song.id)} />
+            return <img src={favoriteIcon} className="favorite" alt="heart" onClick={() => toggleFavorite(song.id)} />
         } else {
-            return <img src={heartIcon} className="favorite" alt="" onClick={() => toggleFavorite(song.id)} />
+            return <img src={heartIcon} className="favorite" alt="heart" onClick={() => toggleFavorite(song.id)} />
         }
     }
 
     function addCart() {
         if (cartItem.some(cart => cart.id === song.id)) {
+            console.log("YESSS");
             return <img src={addCartIcon} className="add-cart" alt="" id={song.id} onClick={() => removeFromCart(song)} />
         } else {
-            return <img src={cartIcon} className="add-cart" alt="" onClick={() => addToCart(song)} />
+            console.log("NOOOOH");
+            return <img src={cartIcon} className="add-cart" alt="" id={song.id} onClick={() => addToCart(song)} />
         }
     }
 
@@ -41,7 +44,8 @@ function Songs({ song, removeScore, addScore }) {
                     <img src={downIcon} alt="downscore" onClick={removeScore} id={song.id} />
                 </span>
                 {addCart()}
-                <p>...</p>
+                
+                <Link to="/lyric"><p>...</p></Link>
             </div>
         </div>
     )

@@ -26,13 +26,12 @@ export default function ContextProvider(props) {
         setSongs(songsArray);
     }
 
-    console.log(songs);
     useEffect(() => {
         songsDATA();
     }, [])
 
+    // Add item to the cart
     function addToCart(newSong) {
-        // Add an element in an array in an immutable way
         setCartItem(prevItem => [...prevItem, newSong]);
     }
 

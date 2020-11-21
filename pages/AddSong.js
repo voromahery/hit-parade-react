@@ -31,7 +31,7 @@ function AddSong() {
                 <input type="text" className="artist" name="artist" placeholder="Artist" />
                 <input type="text" className="price" name="price" placeholder="Price" />
                 <select className="style" name="style">
-                    <option>Style</option>
+                    <option value="">Style</option>
                     <option value="soul">Soul</option>
                     <option value="rock">Rock</option>
                     <option value="rap">Rap</option>
