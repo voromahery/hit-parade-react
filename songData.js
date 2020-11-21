@@ -138,6 +138,8 @@ Le gars là c'est un beau parleur, c'est un beau parleur
         title: "Monsoon",
         style: "Rock",
         favorite: true,
+        scoreUp: 6,
+        scoreDown: 0,
         price: 2300,
         lyric: `
         [Verse 1]

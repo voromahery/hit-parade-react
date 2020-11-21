@@ -33916,6 +33916,8 @@ var data = [{
   title: "Monsoon",
   style: "Rock",
   favorite: true,
+  scoreUp: 6,
+  scoreDown: 0,
   price: 2300,
   lyric: "\n        [Verse 1]\nI'm staring at a broken door\nThere's nothing left here anymore\nMy room is cold\nIt's making me insane\n\nI've been waiting here so long\nBut now the moment seems to have come\nI see the dark clouds coming up again\n\n[Chorus]\nRunning through the monsoon\nBeyond the world\nTo the end of time\nWhere the rain won't hurt\nFighting the storm\nInto the blue\nAnd when I lose myself I think of you\nTogether we'll be running somewhere new\nThrough the monsoon\nJust me and you\n\n[Verse 2]\nA half-moon\u2019s fading from my sight\nI see your vision in its light\nBut now it's gone and left me so alone\nI know I have to find you now\nCan hear your name, I don't know how\nWhy can't we make this darkness feel like home?\n        "
 }];
