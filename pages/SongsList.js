@@ -13,6 +13,7 @@ function SongsList() {
         const findSong = songs.find(song => song.id === songId);
         if (findSong) {
             setUpScore(findSong.scoreUp++);
+            console.log("UP");
         }
     }
 

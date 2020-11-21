@@ -4,16 +4,15 @@ import favoriteIcon from '../icons/favorite-fill.svg';
 import unfavoriteIcon from '../icons/favorite-line.svg';
 
 function Songs({ song, removeScore, addScore }) {
-const {favorited} = useContext(Context)
+    const { toggleFavorite } = useContext(Context)
 
-
-function addHeartIcon() {
-    if (song.favorite) {
-        return <img src={favoriteIcon} className="favorite" alt="" onClick={favorited}/>
-    } else {
-        return <img src={unfavoriteIcon} className="favorite" alt="" onClick={favorited}/>
+    function addHeartIcon() {
+        if (song.favorite) {
+            return <img src={favoriteIcon} className="favorite" alt="" onClick={() => toggleFavorite(song.id)} />
+        } else {
+            return <img src={unfavoriteIcon} className="favorite" alt="" onClick={() => toggleFavorite(song.id)} />
+        }
     }
-}
 
     return (
         <div>

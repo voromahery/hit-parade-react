@@ -4,17 +4,26 @@ const Context = React.createContext();
 
 export default function ContextProvider(props) {
     const [songs, setSongs] = useState([]);
-    const [isFavorite, setIsFavorite] = useState(false);
     const [songStyle, setSongStyle] = useState([]);
     function songsDATA() {
         setSongs(data)
         // setSongStyle([{style: data.style}]);
     }
 
-function favorited() {
-    setIsFavorite(true);
-    console.log('favorite');
-}
+    function toggleFavorite(id) {
+        const songsArray = songs.map(song => {
+            if (song.id === id) {
+                // Update this element 
+                return {
+                    ...song,
+                    isFavorite: !song.favorite,
+                }
+            };
+            console.log(song,song.id);
+            return song;
+        })
+        setSongs(songsArray);
+    }
 
     useEffect(() => {
         songsDATA();
@@ -22,7 +31,7 @@ function favorited() {
 
     return (
         <div>
-            <Context.Provider value={{ songs, setSongs, songStyle, setSongStyle, isFavorite, setIsFavorite, favorited }}>
+            <Context.Provider value={{ songs, setSongs, songStyle, setSongStyle, toggleFavorite }}>
                 {props.children}
             </Context.Provider>
         </div>

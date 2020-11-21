@@ -33930,6 +33930,12 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -33952,23 +33958,29 @@ function ContextProvider(props) {
       songs = _useState2[0],
       setSongs = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(false),
+  var _useState3 = (0, _react.useState)([]),
       _useState4 = _slicedToArray(_useState3, 2),
-      isFavorite = _useState4[0],
-      setIsFavorite = _useState4[1];
-
-  var _useState5 = (0, _react.useState)([]),
-      _useState6 = _slicedToArray(_useState5, 2),
-      songStyle = _useState6[0],
-      setSongStyle = _useState6[1];
+      songStyle = _useState4[0],
+      setSongStyle = _useState4[1];
 
   function songsDATA() {
     setSongs(_songData.default); // setSongStyle([{style: data.style}]);
   }
 
-  function favorited() {
-    setIsFavorite(true);
-    console.log('favorite');
+  function toggleFavorite(id) {
+    var songsArray = songs.map(function (song) {
+      if (song.id === id) {
+        // Update this element 
+        return _objectSpread(_objectSpread({}, song), {}, {
+          isFavorite: !song.favorite
+        });
+      }
+
+      ;
+      console.log(song, song.id);
+      return song;
+    });
+    setSongs(songsArray);
   }
 
   (0, _react.useEffect)(function () {
@@ -33980,9 +33992,7 @@ function ContextProvider(props) {
       setSongs: setSongs,
       songStyle: songStyle,
       setSongStyle: setSongStyle,
-      isFavorite: isFavorite,
-      setIsFavorite: setIsFavorite,
-      favorited: favorited
+      toggleFavorite: toggleFavorite
     }
   }, props.children));
 }
@@ -34143,7 +34153,7 @@ function Songs(_ref) {
       addScore = _ref.addScore;
 
   var _useContext = (0, _react.useContext)(_Context.Context),
-      favorited = _useContext.favorited;
+      toggleFavorite = _useContext.toggleFavorite;
 
   function addHeartIcon() {
     if (song.favorite) {
@@ -34151,14 +34161,18 @@ function Songs(_ref) {
         src: _favoriteFill.default,
         className: "favorite",
         alt: "",
-        onClick: favorited
+        onClick: function onClick() {
+          return toggleFavorite(song.id);
+        }
       });
     } else {
       return /*#__PURE__*/_react.default.createElement("img", {
         src: _favoriteLine.default,
         className: "favorite",
         alt: "",
-        onClick: favorited
+        onClick: function onClick() {
+          return toggleFavorite(song.id);
+        }
       });
     }
   }
@@ -34234,6 +34248,7 @@ function SongsList() {
 
     if (findSong) {
       setUpScore(findSong.scoreUp++);
+      console.log("UP");
     }
   }
 
@@ -34400,7 +34415,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55703" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57342" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
