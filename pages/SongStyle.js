@@ -1,11 +1,11 @@
 import React, { useContext, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Context } from '../Context';
 import data from './../songData';
 
 function SongStyle() {
     const { songs } = useContext(Context);
-    const [style] = useState(["Rock", "R&B", "Afrotrap", "Slow", "Kawitry", "Rap"]);
+    const [style] = useState(["Rock", "R&B", "Afrotrap", "Slow", "Kawitry", "Rap", "Soul"]);
     console.log(data, songs);
     return (
         <div>

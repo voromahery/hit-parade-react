@@ -3,7 +3,7 @@ const data = [
         id: 62462462876,
         title: "Lionne",
         artist: "Dadju",
-        style: "R&B",
+        style: "Soul",
         scoreUp: 2,
         scoreDown: 0,
         lyric: `

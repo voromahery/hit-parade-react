@@ -5,7 +5,6 @@ import SongStyle from './pages/SongStyle';
 import AddSong from './pages/AddSong';
 import SongsList from './pages/SongsList';
 import CartSong from './pages/CartSong';
-import Music from './pages/Music';
 import Lyric from './pages/Lyric';
 import Style from './pages/Style';
 import SpecSong from './pages/SpecSong';
@@ -23,9 +22,6 @@ function App() {
 				</Route>
 				<Route path="/cart">
 					<CartSong />
-				</Route>
-				<Route path="/style/soul">
-					<Music />
 				</Route>
 				<Route path="/lyric/:songLyric">
 					<Lyric />

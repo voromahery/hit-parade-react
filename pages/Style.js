@@ -1,12 +1,11 @@
 import React, { useContext } from 'react'
 import { Context } from './../Context';
 import { useParams } from 'react-router-dom';
-import data from './../songData';
 
 function Style() {
     const { songs } = useContext(Context);
     const { styleName } = useParams();
-    const styleSong = songs.filter(song => song.style == styleName);
+    const styleSong = songs.filter(song => song.style === styleName);
     console.log(styleName, styleSong);
     return (
         <div>

@@ -41,7 +41,18 @@ export default function ContextProvider(props) {
 
     return (
         <div>
-            <Context.Provider value={{ songs, setSongs, songStyle, setSongStyle, toggleFavorite,cartItem, setCartItem, addToCart, removeFromCart }}>
+            <Context.Provider value={{
+                songs,
+                setSongs,
+                songStyle,
+                setSongStyle,
+                toggleFavorite,
+                cartItem,
+                setCartItem,
+                addToCart,
+                removeFromCart
+            }}
+            >
                 {props.children}
             </Context.Provider>
         </div>
