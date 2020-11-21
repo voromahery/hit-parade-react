@@ -5,8 +5,8 @@ import Songs from './../components/Songs';
 function SongsList() {
     const { songs } = useContext(Context);
     const sortByScore = songs.sort((a, b) => (b.scoreUp - b.scoreDown) - (a.scoreUp - a.scoreDown));
-    const [upScore, setUpScore] = useState(0);
-    const [downScore, setDownScore] = useState(0);
+    const [upScore, setUpScore] = useState();
+    const [downScore, setDownScore] = useState();
 
     function addScore(e) {
         const songId = Number(e.target.id);

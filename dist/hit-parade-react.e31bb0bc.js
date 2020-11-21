@@ -33963,13 +33963,18 @@ function ContextProvider(props) {
       songStyle = _useState4[0],
       setSongStyle = _useState4[1];
 
+  var _useState5 = (0, _react.useState)([]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      cartItem = _useState6[0],
+      setCartItem = _useState6[1];
+
   function songsDATA() {
     setSongs(_songData.default); // setSongStyle([{style: data.style}]);
   }
 
   function toggleFavorite(id) {
     var songsArray = songs.map(function (song) {
-      if (song.id !== id) {
+      if (song.id === id) {
         // Update this element 
         return _objectSpread(_objectSpread({}, song), {}, {
           favorite: !song.favorite
@@ -33992,7 +33997,9 @@ function ContextProvider(props) {
       setSongs: setSongs,
       songStyle: songStyle,
       setSongStyle: setSongStyle,
-      toggleFavorite: toggleFavorite
+      toggleFavorite: toggleFavorite,
+      cartItem: cartItem,
+      setCartItem: setCartItem
     }
   }, props.children));
 }
@@ -34125,6 +34132,14 @@ exports.default = _default;
 module.exports = "/favorite-fill.ee79710d.svg";
 },{}],"icons/favorite-line.svg":[function(require,module,exports) {
 module.exports = "/favorite-line.fe2f29bc.svg";
+},{}],"icons/cart-fill.svg":[function(require,module,exports) {
+module.exports = "/cart-fill.d2aa976b.svg";
+},{}],"icons/cart-line.svg":[function(require,module,exports) {
+module.exports = "/cart-line.b8efeea3.svg";
+},{}],"icons/upscore.svg":[function(require,module,exports) {
+module.exports = "/upscore.9303c3ea.svg";
+},{}],"icons/downscore.svg":[function(require,module,exports) {
+module.exports = "/downscore.cd61e82c.svg";
 },{}],"components/Songs.js":[function(require,module,exports) {
 "use strict";
 
@@ -34141,6 +34156,14 @@ var _favoriteFill = _interopRequireDefault(require("../icons/favorite-fill.svg")
 
 var _favoriteLine = _interopRequireDefault(require("../icons/favorite-line.svg"));
 
+var _cartFill = _interopRequireDefault(require("../icons/cart-fill.svg"));
+
+var _cartLine = _interopRequireDefault(require("../icons/cart-line.svg"));
+
+var _upscore = _interopRequireDefault(require("../icons/upscore.svg"));
+
+var _downscore = _interopRequireDefault(require("../icons/downscore.svg"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
@@ -34153,7 +34176,8 @@ function Songs(_ref) {
       addScore = _ref.addScore;
 
   var _useContext = (0, _react.useContext)(_Context.Context),
-      toggleFavorite = _useContext.toggleFavorite;
+      toggleFavorite = _useContext.toggleFavorite,
+      cartItem = _useContext.cartItem;
 
   function addHeartIcon() {
     if (song.favorite) {
@@ -34177,20 +34201,48 @@ function Songs(_ref) {
     }
   }
 
+  function addCart() {
+    if (cartItem.some(function (cart) {
+      return cart.id === song.id;
+    })) {
+      return /*#__PURE__*/_react.default.createElement("img", {
+        src: _cartFill.default,
+        className: "add-cart",
+        alt: "",
+        id: song.id
+      });
+    } else {
+      return /*#__PURE__*/_react.default.createElement("img", {
+        src: _cartLine.default,
+        className: "add-cart",
+        alt: "",
+        id: song.id
+      });
+    }
+  }
+
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "card"
-  }, addHeartIcon(), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)), /*#__PURE__*/_react.default.createElement("span", null, song.scoreUp, /*#__PURE__*/_react.default.createElement("button", {
+  }, addHeartIcon(), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)), /*#__PURE__*/_react.default.createElement("span", {
+    className: "score"
+  }, song.scoreUp, /*#__PURE__*/_react.default.createElement("img", {
+    src: _upscore.default,
+    alt: "upscore",
     onClick: addScore,
     id: song.id
-  }, "Add")), /*#__PURE__*/_react.default.createElement("span", null, song.scoreDown, /*#__PURE__*/_react.default.createElement("button", {
+  })), /*#__PURE__*/_react.default.createElement("span", {
+    className: "score"
+  }, song.scoreDown, /*#__PURE__*/_react.default.createElement("img", {
+    src: _downscore.default,
+    alt: "downscore",
     onClick: removeScore,
     id: song.id
-  }, "remove")), /*#__PURE__*/_react.default.createElement("span", null, "Cart"), /*#__PURE__*/_react.default.createElement("p", null, "Lyric")));
+  })), addCart(), /*#__PURE__*/_react.default.createElement("p", null, "...")));
 }
 
 var _default = Songs;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../Context":"Context.js","../icons/favorite-fill.svg":"icons/favorite-fill.svg","../icons/favorite-line.svg":"icons/favorite-line.svg"}],"pages/SongsList.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context":"Context.js","../icons/favorite-fill.svg":"icons/favorite-fill.svg","../icons/favorite-line.svg":"icons/favorite-line.svg","../icons/cart-fill.svg":"icons/cart-fill.svg","../icons/cart-line.svg":"icons/cart-line.svg","../icons/upscore.svg":"icons/upscore.svg","../icons/downscore.svg":"icons/downscore.svg"}],"pages/SongsList.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34230,12 +34282,12 @@ function SongsList() {
     return b.scoreUp - b.scoreDown - (a.scoreUp - a.scoreDown);
   });
 
-  var _useState = (0, _react.useState)(0),
+  var _useState = (0, _react.useState)(),
       _useState2 = _slicedToArray(_useState, 2),
       upScore = _useState2[0],
       setUpScore = _useState2[1];
 
-  var _useState3 = (0, _react.useState)(0),
+  var _useState3 = (0, _react.useState)(),
       _useState4 = _slicedToArray(_useState3, 2),
       downScore = _useState4[0],
       setDownScore = _useState4[1];
@@ -34414,7 +34466,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57342" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49733" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

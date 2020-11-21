@@ -1,14 +1,23 @@
-.card-container {
+.card-container,
+.card,
+.score {
     display: flex;
+}
+
+.card-container {
     flex-direction: column;
     gap: 16px;
     color: #FFFFFF;
 }
 
 .card {
-    display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #272343;
     max-width: 860px;
+    padding: 32px;
+}
+
+.score {
+    align-items: center;
 }
