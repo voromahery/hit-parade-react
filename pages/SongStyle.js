@@ -9,7 +9,7 @@ function SongStyle() {
     console.log(data, songs);
     return (
         <div>
-            <ul>
+            <ul className="style-list">
                 {style.map(song =>
                     <li key={song}>
                         <Link to={`/style/${song}`}>

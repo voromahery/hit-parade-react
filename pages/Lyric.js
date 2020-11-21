@@ -5,15 +5,13 @@ import data from './../songData';
 
 function Lyric() {
     const { songs } = useContext(Context);
-    const { id } = useParams();
-    const songLyrics = songs.find(song => song.id === Number(id)) || data.find(song => song.id === Number(id));
-    console.log(songLyrics, songs);
+    const { songLyric } = useParams();
+    const songLyrics = songs.find(song => song.id === Number(songLyric)) || data.find(song => song.id === Number(songLyric) || "");
     return (
         <div>
-            <h1>{`${songLyrics.artist}: ${songLyrics.title}`}</h1>
             <div className="lyric-card">
                 <h3>Lyric</h3>
-                <div>{songLyrics.lyric}</div>
+                <div>{songLyrics.lyric || ["No lyric available!😢"]}</div>
             </div>
         </div>
     )

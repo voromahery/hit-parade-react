@@ -12,11 +12,11 @@
 .card,
 .lyric-card {
     background-color: #272343;
-    color: #FFFFFF;
     padding: 32px;
 } 
 
-.lyric-card {
+.lyric-card,
+.style-list {
     font-weight: 400;
     border-radius: 5px;
 }
@@ -41,4 +41,18 @@
 .lyric{
     width: 24px;
     height: 24px;
+}
+
+.card a:-webkit-any-link,
+.card,
+.lyric-card {
+    color: #FFFFFF;
+}
+
+.style-list {
+    font-size: 32px;
+}
+
+.style-list a:-webkit-any-link {
+    color: #000000;
 }

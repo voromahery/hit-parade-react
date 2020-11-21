@@ -8,6 +8,7 @@ import CartSong from './pages/CartSong';
 import Music from './pages/Music';
 import Lyric from './pages/Lyric';
 import Style from './pages/Style';
+import SpecSong from './pages/SpecSong';
 
 function App() {
 	return (
@@ -26,7 +27,7 @@ function App() {
 				<Route path="/style/soul">
 					<Music />
 				</Route>
-				<Route path="/lyric/:id">
+				<Route path="/lyric/:songLyric">
 					<Lyric />
 				</Route>
 				<Route exact path="/style">
@@ -34,6 +35,9 @@ function App() {
 				</Route>
 				<Route exact path="/style/:styleName">
 					<Style />
+				</Route>
+				<Route exact path="/song/:songId">
+					<SpecSong />
 				</Route>
 			</Switch>
 		</div>

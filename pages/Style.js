@@ -10,12 +10,17 @@ function Style() {
     console.log(styleName, styleSong);
     return (
         <div>
-            {styleSong.map(song =>
-                <div key={song.id}>
-                    <h3>{song.artist}</h3>
-                    <span>{song.style}</span>
-                </div>
-            )}
+            <h1>{styleName}</h1>
+            <div className="card-container">
+                {styleSong.map(song =>
+                    <div key={song.id} className="card">
+                        <div>
+                            <h3>{song.title}</h3>
+                            <span>{song.artist}</span>
+                        </div>
+                    </div>
+                )}
+            </div>
         </div>
     )
 }

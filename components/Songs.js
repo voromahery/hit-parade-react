@@ -35,7 +35,9 @@ function Songs({ song, removeScore, addScore }) {
             <div className="card">
                 {addHeartIcon()}
                 <div>
-                    <h3>{song.title}</h3>
+                    <Link to={`/song/${song.id}`}>
+                        <h3>{song.title}</h3>
+                    </Link>
                     <span>{song.artist}</span>
                 </div>
                 <span className="score">{song.scoreUp}
@@ -46,9 +48,9 @@ function Songs({ song, removeScore, addScore }) {
                 </span>
                 {addCart()}
                 <div className="lyric">
-                <Link to={`/lyric/${song.id}`}>
-                        <img src={lyricIcon} alt="" className="Lyric" id={song.id}/>
-                </Link>
+                    <Link to={`/lyric/${song.id}`}>
+                        <img src={lyricIcon} alt="" className="Lyric" id={song.id} />
+                    </Link>
                 </div>
             </div>
         </div>

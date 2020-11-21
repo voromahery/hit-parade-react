@@ -34080,7 +34080,9 @@ function SongStyle() {
       style = _useState2[0];
 
   console.log(_songData.default, songs);
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, style.map(function (song) {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", {
+    className: "style-list"
+  }, style.map(function (song) {
     return /*#__PURE__*/_react.default.createElement("li", {
       key: song
     }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
@@ -34296,7 +34298,9 @@ function Songs(_ref) {
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "card"
-  }, addHeartIcon(), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)), /*#__PURE__*/_react.default.createElement("span", {
+  }, addHeartIcon(), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/song/".concat(song.id)
+  }, /*#__PURE__*/_react.default.createElement("h3", null, song.title)), /*#__PURE__*/_react.default.createElement("span", null, song.artist)), /*#__PURE__*/_react.default.createElement("span", {
     className: "score"
   }, song.scoreUp, /*#__PURE__*/_react.default.createElement("img", {
     src: _upscore.default,
@@ -34538,18 +34542,17 @@ function Lyric() {
       songs = _useContext.songs;
 
   var _useParams = (0, _reactRouterDom.useParams)(),
-      id = _useParams.id;
+      songLyric = _useParams.songLyric;
 
   var songLyrics = songs.find(function (song) {
-    return song.id === Number(id);
+    return song.id === Number(songLyric);
   }) || _songData.default.find(function (song) {
-    return song.id === Number(id);
+    return song.id === Number(songLyric) || "";
   });
 
-  console.log(songLyrics, songs);
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "".concat(songLyrics.artist, ": ").concat(songLyrics.title)), /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "lyric-card"
-  }, /*#__PURE__*/_react.default.createElement("h3", null, "Lyric"), /*#__PURE__*/_react.default.createElement("div", null, songLyrics.lyric)));
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "Lyric"), /*#__PURE__*/_react.default.createElement("div", null, songLyrics.lyric || ["No lyric available!😢"])));
 }
 
 var _default = Lyric;
@@ -34587,16 +34590,62 @@ function Style() {
     return song.style == styleName;
   });
   console.log(styleName, styleSong);
-  return /*#__PURE__*/_react.default.createElement("div", null, styleSong.map(function (song) {
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, styleName), /*#__PURE__*/_react.default.createElement("div", {
+    className: "card-container"
+  }, styleSong.map(function (song) {
     return /*#__PURE__*/_react.default.createElement("div", {
-      key: song.id
-    }, /*#__PURE__*/_react.default.createElement("h3", null, song.artist), /*#__PURE__*/_react.default.createElement("span", null, song.style));
-  }));
+      key: song.id,
+      className: "card"
+    }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)));
+  })));
 }
 
 var _default = Style;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./../Context":"Context.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./../songData":"songData.js"}],"App.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./../Context":"Context.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./../songData":"songData.js"}],"pages/SpecSong.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Context = require("./../Context");
+
+var _songData = _interopRequireDefault(require("./../songData"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function SpecSong() {
+  var _useContext = (0, _react.useContext)(_Context.Context),
+      songs = _useContext.songs;
+
+  var _useParams = (0, _reactRouterDom.useParams)(),
+      songId = _useParams.songId;
+
+  var specificSong = songs.find(function (song) {
+    return song.id === Number(songId);
+  }) || _songData.default.find(function (song) {
+    return song.id === Number(songId);
+  });
+
+  console.log(specificSong, songId);
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "".concat(specificSong.artist, ": ").concat(specificSong.title)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "lyric-card"
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "Lyric"), /*#__PURE__*/_react.default.createElement("div", null, specificSong.lyric))));
+}
+
+var _default = SpecSong;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./../Context":"Context.js","./../songData":"songData.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34624,6 +34673,8 @@ var _Lyric = _interopRequireDefault(require("./pages/Lyric"));
 
 var _Style = _interopRequireDefault(require("./pages/Style"));
 
+var _SpecSong = _interopRequireDefault(require("./pages/SpecSong"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
@@ -34637,19 +34688,22 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement(_CartSong.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/style/soul"
   }, /*#__PURE__*/_react.default.createElement(_Music.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/lyric/:id"
+    path: "/lyric/:songLyric"
   }, /*#__PURE__*/_react.default.createElement(_Lyric.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/style"
   }, /*#__PURE__*/_react.default.createElement(_SongStyle.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     exact: true,
     path: "/style/:styleName"
-  }, /*#__PURE__*/_react.default.createElement(_Style.default, null))));
+  }, /*#__PURE__*/_react.default.createElement(_Style.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
+    path: "/song/:songId"
+  }, /*#__PURE__*/_react.default.createElement(_SpecSong.default, null))));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./components/Header":"components/Header.js","./pages/SongStyle":"pages/SongStyle.js","./pages/AddSong":"pages/AddSong.js","./pages/SongsList":"pages/SongsList.js","./pages/CartSong":"pages/CartSong.js","./pages/Music":"pages/Music.js","./pages/Lyric":"pages/Lyric.js","./pages/Style":"pages/Style.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./components/Header":"components/Header.js","./pages/SongStyle":"pages/SongStyle.js","./pages/AddSong":"pages/AddSong.js","./pages/SongsList":"pages/SongsList.js","./pages/CartSong":"pages/CartSong.js","./pages/Music":"pages/Music.js","./pages/Lyric":"pages/Lyric.js","./pages/Style":"pages/Style.js","./pages/SpecSong":"pages/SpecSong.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -34693,7 +34747,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56378" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57315" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

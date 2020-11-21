@@ -23,6 +23,5 @@ img {
 }
 
 a:-webkit-any-link {
-    color: #272343;
     text-decoration: none;
 }
