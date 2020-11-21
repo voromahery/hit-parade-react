@@ -6,6 +6,7 @@ import addCartIcon from '../icons/cart-fill.svg';
 import cartIcon from '../icons/cart-line.svg';
 import upIcon from '../icons/upscore.svg';
 import downIcon from '../icons/downscore.svg';
+import lyricIcon from '../icons/lyric.svg';
 import { Link } from 'react-router-dom';
 
 function Songs({ song, removeScore, addScore }) {
@@ -44,8 +45,11 @@ function Songs({ song, removeScore, addScore }) {
                     <img src={downIcon} alt="downscore" onClick={removeScore} id={song.id} />
                 </span>
                 {addCart()}
-                
-                <Link to="/lyric"><p>...</p></Link>
+                <div className="lyric">
+                <Link to={`/lyric/${song.id}`}>
+                        <img src={lyricIcon} alt="" className="Lyric" id={song.id}/>
+                </Link>
+                </div>
             </div>
         </div>
     )

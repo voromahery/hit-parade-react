@@ -7,6 +7,7 @@ import SongsList from './pages/SongsList';
 import CartSong from './pages/CartSong';
 import Music from './pages/Music';
 import Lyric from './pages/Lyric';
+import Style from './pages/Style';
 
 function App() {
 	return (
@@ -15,9 +16,6 @@ function App() {
 			<Switch>
 				<Route exact path="/">
 					<SongsList />
-				</Route>
-				<Route path="/style">
-					<SongStyle />
 				</Route>
 				<Route path="/add">
 					<AddSong />
@@ -28,8 +26,14 @@ function App() {
 				<Route path="/style/soul">
 					<Music />
 				</Route>
-				<Route path="/lyric">
+				<Route path="/lyric/:id">
 					<Lyric />
+				</Route>
+				<Route exact path="/style">
+					<SongStyle />
+				</Route>
+				<Route exact path="/style/:styleName">
+					<Style />
 				</Route>
 			</Switch>
 		</div>

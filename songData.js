@@ -3,7 +3,7 @@ const data = [
         id: 62462462876,
         title: "Lionne",
         artist: "Dadju",
-        style: "soul",
+        style: "R&B",
         scoreUp: 2,
         scoreDown: 0,
         lyric: `
@@ -75,7 +75,7 @@ Oh oh ah
         id:9999998690,
         title: "Beau parleur",
         artist: "Keblack",
-        style: "slow",
+        style: "R&B",
         scoreUp: 2,
         scoreDown: 0,
         lyric: `
@@ -131,6 +131,45 @@ Le gars là c'est un beau parleur, c'est un beau parleur
         `,
         favorite: false,
         price: 3000,
+    },
+    {
+        id:565431437127,
+        artist:"Hotel Tokyo",
+        title: "Monsoon",
+        style: "Rock",
+        favorite: true,
+        price: 2300,
+        lyric: `
+        [Verse 1]
+I'm staring at a broken door
+There's nothing left here anymore
+My room is cold
+It's making me insane
+
+I've been waiting here so long
+But now the moment seems to have come
+I see the dark clouds coming up again
+
+[Chorus]
+Running through the monsoon
+Beyond the world
+To the end of time
+Where the rain won't hurt
+Fighting the storm
+Into the blue
+And when I lose myself I think of you
+Together we'll be running somewhere new
+Through the monsoon
+Just me and you
+
+[Verse 2]
+A half-moon’s fading from my sight
+I see your vision in its light
+But now it's gone and left me so alone
+I know I have to find you now
+Can hear your name, I don't know how
+Why can't we make this darkness feel like home?
+        `,
     }
 ]
 export default data;

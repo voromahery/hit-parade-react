@@ -19,6 +19,12 @@ ul .style {
 
 img {
     cursor: pointer;
+    max-width: 24px;
+}
+
+a:-webkit-any-link {
+    color: #272343;
+    text-decoration: none;
 }
 .navigation {
     display: flex;
@@ -34,24 +40,42 @@ img {
 .card-container {
     flex-direction: column;
     gap: 16px;
+}
+
+.card,
+.lyric-card {
+    background-color: #272343;
     color: #FFFFFF;
+    padding: 32px;
+} 
+
+.lyric-card {
+    font-weight: 400;
+    border-radius: 5px;
 }
 
 .card {
     align-items: center;
     justify-content: space-between;
-    background-color: #272343;
     max-width: 860px;
-    padding: 32px;
 }
 
 .score {
     align-items: center;
 }
 
-.delete {
-    max-width: 24px;
+.score img {
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 16px;
 }
+
+.lyric a:-webkit-any-link ,
+.lyric{
+    width: 24px;
+    height: 24px;
+}
+
 form {
     display: grid;
     grid-gap: 1rem;

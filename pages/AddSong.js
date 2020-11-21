@@ -32,12 +32,12 @@ function AddSong() {
                 <input type="text" className="price" name="price" placeholder="Price" />
                 <select className="style" name="style">
                     <option value="">Style</option>
-                    <option value="soul">Soul</option>
-                    <option value="rock">Rock</option>
-                    <option value="rap">Rap</option>
-                    <option value="slow">Slow</option>
-                    <option value="afrotrap">Afrotrap</option>
-                    <option value="kawitry">Kawitry</option>
+                    <option value={`R&B`}>{`R&B`}</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Rap">Rap</option>
+                    <option value="Slow">Slow</option>
+                    <option value="Afrotrap">Afrotrap</option>
+                    <option value="Kawitry">Kawitry</option>
                 </select>
                 <textarea placeholder="Lyric" name="lyric"></textarea>
                 <button className="add-button">Add</button>

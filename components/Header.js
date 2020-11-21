@@ -7,16 +7,16 @@ function Header() {
             <h1>Hit Parade</h1>
             <div className="navigation">
                 <Link to="/">
-                    <h3>Popular songs</h3>
+                    <h3>🔥 Popular songs</h3>
                 </Link>
                 <Link to="/style">
-                    <h3>Styles</h3>
+                    <h3>💓Styles</h3>
                 </Link>
                 <Link to="/add">
                     <h3>🌚 Add</h3>
                 </Link>
                 <Link to="/cart">
-                    <h3>Cart</h3>
+                    <h3>🛒 Cart</h3>
                 </Link>
             </div>
         </div>

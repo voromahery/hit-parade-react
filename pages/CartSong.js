@@ -4,7 +4,7 @@ import deleteIcon from '../icons/delete.svg';
 
 function CartSong() {
     const { cartItem, removeFromCart, setCartItem } = useContext(Context);
-
+     const total = 0;
     function buySongs() {
         setTimeout(() => {
             setCartItem([]);
@@ -15,6 +15,10 @@ function CartSong() {
             }
         }, 2000)
     }
+
+    const totalPrice = cartItem.reduce((acc, val) => {
+        return
+    })
 
     return (
         <div className="card-container">

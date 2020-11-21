@@ -19,4 +19,10 @@ ul .style {
 
 img {
     cursor: pointer;
+    max-width: 24px;
+}
+
+a:-webkit-any-link {
+    color: #272343;
+    text-decoration: none;
 }

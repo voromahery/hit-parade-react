@@ -1,20 +1,21 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Context } from '../Context';
+import data from './../songData';
 
 function SongStyle() {
-    const { songs } = useContext(Context)
-
+    const { songs } = useContext(Context);
+    console.log(data, songs);
     return (
         <div>
             <ul>
-                {songs.map((style, index) =>
-                <div key={index}>
-                    <Link to={`./style/${style.style}`}>
-                        <li >{style.style}</li>
-                    </Link>
-                    </div>
-                    )}
+                {songs.map(song =>
+                    <li key={song.id}>
+                        <Link to={`/style/${song.style}`}>
+                            <div>{song.style}</div>
+                        </Link>
+                    </li>
+                )}
             </ul>
         </div>
     )
