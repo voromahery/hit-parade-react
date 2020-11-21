@@ -16,10 +16,11 @@ function CartSong() {
         }, 2000)
     }
 
-    const totalPrice = cartItem.reduce((acc, val) => {
-        return
-    })
+     const totalPrice = cartItem.reduce((acc, val) => {
+         return acc + val.price;
+     },0)
 
+     console.log(totalPrice);
     return (
         <div className="card-container">
             {cartItem.map(cart =>
@@ -33,7 +34,7 @@ function CartSong() {
                 </div>)}
             <div>
                 {cartItem.length > 0 && <button onClick={buySongs}>Buy</button>}
-                <h3>Total: </h3>
+            <h3>Total: {totalPrice}Ar</h3>
             </div>
         </div>
     )

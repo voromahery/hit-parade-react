@@ -5,7 +5,7 @@ import data from './../songData';
 
 function SongStyle() {
     const { songs } = useContext(Context);
-    const [style] = useState(["Rock", "R&B", "Afrotrap", "Slow", "Kawitry", "Rap", "Soul"]);
+    const [style] = useState(["Rock", "R&B", "Afrotrap", "Slow", "Kawitry", "Rap"]);
     console.log(data, songs);
     return (
         <div>

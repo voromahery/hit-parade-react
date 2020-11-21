@@ -29,7 +29,7 @@ function AddSong() {
             <form onSubmit={addNewSong}>
                 <input type="text" className="title" name="title" placeholder="Title" />
                 <input type="text" className="artist" name="artist" placeholder="Artist" />
-                <input type="text" className="price" name="price" placeholder="Price" />
+                <input type="number" className="price" name="price" placeholder="Price" />
                 <select className="style" name="style">
                     <option value="">Style</option>
                     <option value={`R&B`}>{`R&B`}</option>

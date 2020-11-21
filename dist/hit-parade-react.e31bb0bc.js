@@ -34075,7 +34075,7 @@ function SongStyle() {
   var _useContext = (0, _react.useContext)(_Context.Context),
       songs = _useContext.songs;
 
-  var _useState = (0, _react.useState)(["Rock", "R&B", "Afrotrap", "Slow", "Kawitry", "Rap", "Soul"]),
+  var _useState = (0, _react.useState)(["Rock", "R&B", "Afrotrap", "Slow", "Kawitry", "Rap"]),
       _useState2 = _slicedToArray(_useState, 1),
       style = _useState2[0];
 
@@ -34154,7 +34154,7 @@ function AddSong() {
     name: "artist",
     placeholder: "Artist"
   }), /*#__PURE__*/_react.default.createElement("input", {
-    type: "text",
+    type: "number",
     className: "price",
     name: "price",
     placeholder: "Price"
@@ -34453,8 +34453,9 @@ function CartSong() {
   }
 
   var totalPrice = cartItem.reduce(function (acc, val) {
-    return;
-  });
+    return acc + val.price;
+  }, 0);
+  console.log(totalPrice);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "card-container"
   }, cartItem.map(function (cart) {
@@ -34474,7 +34475,7 @@ function CartSong() {
     }, cart.price));
   }), /*#__PURE__*/_react.default.createElement("div", null, cartItem.length > 0 && /*#__PURE__*/_react.default.createElement("button", {
     onClick: buySongs
-  }, "Buy"), /*#__PURE__*/_react.default.createElement("h3", null, "Total: ")));
+  }, "Buy"), /*#__PURE__*/_react.default.createElement("h3", null, "Total: ", totalPrice, "Ar")));
 }
 
 var _default = CartSong;
@@ -34694,7 +34695,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53971" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56378" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
