@@ -12,19 +12,19 @@ export default function ContextProvider(props) {
 
     function toggleFavorite(id) {
         const songsArray = songs.map(song => {
-            if (song.id === id) {
+            if (song.id !== id) {
                 // Update this element 
                 return {
                     ...song,
-                    isFavorite: !song.favorite,
+                    favorite: !song.favorite,
                 }
             };
-            console.log(song,song.id);
             return song;
         })
         setSongs(songsArray);
     }
 
+    console.log(songs);
     useEffect(() => {
         songsDATA();
     }, [])

@@ -33969,20 +33969,20 @@ function ContextProvider(props) {
 
   function toggleFavorite(id) {
     var songsArray = songs.map(function (song) {
-      if (song.id === id) {
+      if (song.id !== id) {
         // Update this element 
         return _objectSpread(_objectSpread({}, song), {}, {
-          isFavorite: !song.favorite
+          favorite: !song.favorite
         });
       }
 
       ;
-      console.log(song, song.id);
       return song;
     });
     setSongs(songsArray);
   }
 
+  console.log(songs);
   (0, _react.useEffect)(function () {
     songsDATA();
   }, []);
@@ -34248,7 +34248,6 @@ function SongsList() {
 
     if (findSong) {
       setUpScore(findSong.scoreUp++);
-      console.log("UP");
     }
   }
 
