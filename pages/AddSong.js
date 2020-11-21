@@ -11,7 +11,7 @@ function AddSong() {
         {
             title: form.title.value,
             artist: form.artist.value,
-            price: form.price.value,
+            price: Number(form.price.value),
             style: form.style.value,
             lyric: form.lyric.value,
             id: Date.now(),

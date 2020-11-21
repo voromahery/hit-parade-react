@@ -34130,7 +34130,7 @@ function AddSong() {
     var newSongs = {
       title: form.title.value,
       artist: form.artist.value,
-      price: form.price.value,
+      price: Number(form.price.value),
       style: form.style.value,
       lyric: form.lyric.value,
       id: Date.now(),
@@ -34438,24 +34438,22 @@ function CartSong() {
       removeFromCart = _useContext.removeFromCart,
       setCartItem = _useContext.setCartItem;
 
-  var total = 0;
+  var totalPrice = cartItem.reduce(function (acc, item) {
+    return acc + item.price;
+  }, 0);
 
   function buySongs() {
     setTimeout(function () {
       setCartItem([]);
 
       if (cartItem.length === 0 || cartItem.length === 1) {
-        console.log("You bought a song for ...");
+        console.log("You bought a song for ".concat(totalPrice, " Ar"));
       } else {
-        console.log("You bought songs for ...");
+        console.log("You bought songs for ".concat(totalPrice, " Ar"));
       }
     }, 2000);
   }
 
-  var totalPrice = cartItem.reduce(function (acc, val) {
-    return acc + val.price;
-  }, 0);
-  console.log(totalPrice);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "card-container"
   }, cartItem.map(function (cart) {

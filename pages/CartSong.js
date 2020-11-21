@@ -4,23 +4,19 @@ import deleteIcon from '../icons/delete.svg';
 
 function CartSong() {
     const { cartItem, removeFromCart, setCartItem } = useContext(Context);
-     const total = 0;
+    const totalPrice = cartItem.reduce((acc, item) => (acc + item.price),0);
+    
     function buySongs() {
         setTimeout(() => {
             setCartItem([]);
             if (cartItem.length === 0 || cartItem.length === 1) {
-                console.log("You bought a song for ...");
+                console.log(`You bought a song for ${totalPrice} Ar`);
             } else {
-                console.log("You bought songs for ...");
+                console.log(`You bought songs for ${totalPrice} Ar`);
             }
         }, 2000)
     }
 
-     const totalPrice = cartItem.reduce((acc, val) => {
-         return acc + val.price;
-     },0)
-
-     console.log(totalPrice);
     return (
         <div className="card-container">
             {cartItem.map(cart =>
