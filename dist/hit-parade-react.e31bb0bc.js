@@ -33898,7 +33898,8 @@ var data = [{
   scoreUp: 2,
   scoreDown: 0,
   lyric: "\n        Lionne\nOh oh ah\nUn peu de respect, faut respecter\nQuand une lionne arrive \xE0 tout g\xE9rer\nUn de perdu, mais elle s'est retrouver\nPas besoin d'un homme qui l'emp\xEAche d'avancer\nElle a ses r\xE8gles, et sa fiert\xE9\nC'est pas elle que tu verras mendier\nC\xE9libataire ou femme mari\xE9e\n\xC7a change \xE0 rien sa fa\xE7on de penser\nFort caract\xE8re, elle sait dire non\nElle dit jamais sont dernier mot\nEt tu peux lire sous ces paupi\xE8res \"d\xE9termin\xE9e\"\nElle agit, elle ne parle pas, lionne affam\xE9e\nSi tu lui donnes la mis\xE8re du monde\nElle va tout assumer\nSi tu lui donnes la richesse d'un homme\nElle va tout assumer\nElle mettra toujours la famille d'abord\nElle va tout assumer\nLe genre de femme qui \xE0 chaque probl\xE8me s'en sort\nElle va tout assumer, lionne\nAh, lionne\nCours ma lionne\nAh, lionne\nSois pas na\xEFf\nLa Khaleesie sait tr\xE8s bien comment g\xE9rer sa vie\nCharismatique, elle est sexy\nElle prend soin d'elle malgr\xE9 tous les soucis\nElle prend des risques elle r\xE9fl\xE9chit\nPas besoin de t'd'mander ton avis\nSon objectif, la r\xE9ussite\nSon amour conna\xEEt pas de limite\nFort caract\xE8re, elle sait dire non\nElle dit jamais sont dernier mot\nEt tu peux lire sous ses paupi\xE8res \"d\xE9termin\xE9e\"\nElle agit, elle ne parle pas, lionne affam\xE9e\nSi tu lui donnes la mis\xE8re du monde\nElle va tout assumer\nSi tu lui donnes la richesse d'un homme\nElle va tout assumer\nElle mettra toujours la famille d'abord\nElle va tout assumer\nLe genre de femme qui \xE0 chaque probl\xE8me s'en sort\nElle va tout assumer, lionne\nAh, lionne\nCours ma lionne\nAh, lionne\nElle veut tout assumer, assumer (tout assumer)\nTout assumer, assumer (tout assumer)\nEt toutes les fois o\xF9 elle aurait pu tomber\nElle a jamais pens\xE9 qu'elle pouvait pas y arriver\nAh, lionne\nCours ma lionne\nAh, lionne\nTout assumer, assumer\nTout assumer, assumer\nElle veut tout assumer, tout assumer\nTout assumer, tout assumer\nOh oh ah\n        ",
-  favorite: true
+  favorite: true,
+  price: 1200
 }, {
   id: 9999998690,
   title: "Beau parleur",
@@ -33907,7 +33908,8 @@ var data = [{
   scoreUp: 2,
   scoreDown: 0,
   lyric: "\n        Djazzi la prod ne t'appartient pas\nLui il nie en bloc\nM\xEAme quand tu l'as grill\xE9, \"c'est pas moi, c'est mes potes!\"\nMais toi tu l'as grill\xE9 (aah)\nC'est le roi de la soir\xE9e\nAttaquant comme Suarez\nLe roi des enfoir\xE9s\nLa pire des esp\xE8ces\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\nJ'te dis l'amour c'est dur, y a des blessures\nAvec son ex, il a trop souffert\nIl connait la proc\xE9dure, il sait y faire\nIl te fera tomber dans son univers\nIl sait qu'il est beau, qu'il est fantastique\nEn soir\xE9e il g\xE8re toutes les gows\nC'est un gars de la street\nEt \xE7a il faut y rem\xE9dier, il en a fait son m\xE9tier\nEt \xE7a il faut y rem\xE9dier, la bataille sera sans r\xE9pit\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\nC'est vraiment une ordure, pr\xEAt \xE0 te trahir\nIl te veut dans son lit et puis c'est fini\nOui c'est vraiment une ordure, dragueur aguerri\nMilitaire dangereux mais sans le treillis\nPour lui c'est une \xE9vidence, une longueur d'avance\nIl fera le mec fragile\nAvec toi \xE7a prend pas, non mais avouez qu'il est agile\nC'est un Casanova, il faut qu'il innove\nSinon il finira game-over\nEn tant que un Casanova, il faut qu'il innove\nNan il est mauvais\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\nC'est trop tard, oui mon gars c'est trop tard\nT'es qu'un beau parleur mais t'as grill\xE9 la main dans le sac, bah ouais\nMais il est trop tard\nT'es qu'un beau parleur\nIl est trop tard, elle t'a mis game-over\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\n        ",
-  favorite: false
+  favorite: false,
+  price: 3000
 }];
 var _default = data;
 exports.default = _default;
@@ -33929,6 +33931,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -33991,6 +34001,22 @@ function ContextProvider(props) {
   (0, _react.useEffect)(function () {
     songsDATA();
   }, []);
+
+  function addToCart(newSong) {
+    // Add an element in an array in an immutable way
+    setCartItem(function (prevItem) {
+      return [].concat(_toConsumableArray(prevItem), [newSong]);
+    });
+  }
+
+  function removeFromCart(id) {
+    setCartItem(function (prevItem) {
+      return prevItem.filter(function (item) {
+        return item.id !== id;
+      });
+    });
+  }
+
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
       songs: songs,
@@ -33999,7 +34025,9 @@ function ContextProvider(props) {
       setSongStyle: setSongStyle,
       toggleFavorite: toggleFavorite,
       cartItem: cartItem,
-      setCartItem: setCartItem
+      setCartItem: setCartItem,
+      addToCart: addToCart,
+      removeFromCart: removeFromCart
     }
   }, props.children));
 }
@@ -34177,7 +34205,9 @@ function Songs(_ref) {
 
   var _useContext = (0, _react.useContext)(_Context.Context),
       toggleFavorite = _useContext.toggleFavorite,
-      cartItem = _useContext.cartItem;
+      cartItem = _useContext.cartItem,
+      addToCart = _useContext.addToCart,
+      removeFromCart = _useContext.removeFromCart;
 
   function addHeartIcon() {
     if (song.favorite) {
@@ -34209,14 +34239,19 @@ function Songs(_ref) {
         src: _cartFill.default,
         className: "add-cart",
         alt: "",
-        id: song.id
+        id: song.id,
+        onClick: function onClick() {
+          return removeFromCart(song);
+        }
       });
     } else {
       return /*#__PURE__*/_react.default.createElement("img", {
         src: _cartLine.default,
         className: "add-cart",
         alt: "",
-        id: song.id
+        onClick: function onClick() {
+          return addToCart(song);
+        }
       });
     }
   }
@@ -34328,7 +34363,9 @@ function SongsList() {
 
 var _default = SongsList;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../Context.js":"Context.js","./../components/Songs":"components/Songs.js"}],"pages/CartSong.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context.js":"Context.js","./../components/Songs":"components/Songs.js"}],"icons/delete.svg":[function(require,module,exports) {
+module.exports = "/delete.491a0fad.svg";
+},{}],"pages/CartSong.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34336,17 +34373,48 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
+
+var _Context = require("../Context");
+
+var _delete = _interopRequireDefault(require("../icons/delete.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function CartSong() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Add to Cart"));
+  var _useContext = (0, _react.useContext)(_Context.Context),
+      cartItem = _useContext.cartItem,
+      removeFromCart = _useContext.removeFromCart; // function deletefromCart() {
+  // }
+
+
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "card-container"
+  }, cartItem.map(function (cart) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "card",
+      key: cart.id
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: _delete.default,
+      alt: "",
+      id: cart.id,
+      onClick: function onClick() {
+        return removeFromCart(cart.id);
+      },
+      className: "delete"
+    }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, cart.title), /*#__PURE__*/_react.default.createElement("span", null, cart.artist)), /*#__PURE__*/_react.default.createElement("span", {
+      className: "price"
+    }, cart.price));
+  }));
 }
 
 var _default = CartSong;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"pages/Music.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../Context":"Context.js","../icons/delete.svg":"icons/delete.svg"}],"pages/Music.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34466,7 +34534,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49733" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53102" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

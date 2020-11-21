@@ -31,9 +31,18 @@ export default function ContextProvider(props) {
         songsDATA();
     }, [])
 
+    function addToCart(newSong) {
+        // Add an element in an array in an immutable way
+        setCartItem(prevItem => [...prevItem, newSong]);
+    }
+
+    function removeFromCart(id) {
+        setCartItem(prevItem => prevItem.filter(item => item.id !== id));
+    }
+
     return (
         <div>
-            <Context.Provider value={{ songs, setSongs, songStyle, setSongStyle, toggleFavorite,cartItem, setCartItem }}>
+            <Context.Provider value={{ songs, setSongs, songStyle, setSongStyle, toggleFavorite,cartItem, setCartItem, addToCart, removeFromCart }}>
                 {props.children}
             </Context.Provider>
         </div>

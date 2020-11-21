@@ -48,6 +48,10 @@ img {
 .score {
     align-items: center;
 }
+
+.delete {
+    max-width: 24px;
+}
 form {
     display: grid;
     grid-gap: 1rem;

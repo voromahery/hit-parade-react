@@ -8,7 +8,7 @@ import upIcon from '../icons/upscore.svg';
 import downIcon from '../icons/downscore.svg';
 
 function Songs({ song, removeScore, addScore }) {
-    const { toggleFavorite, cartItem } = useContext(Context)
+    const { toggleFavorite, cartItem, addToCart, removeFromCart } = useContext(Context)
 
     function addHeartIcon() {
         if (song.favorite) {
@@ -20,9 +20,9 @@ function Songs({ song, removeScore, addScore }) {
 
     function addCart() {
         if (cartItem.some(cart => cart.id === song.id)) {
-            return <img src={addCartIcon} className="add-cart" alt="" id={song.id}/>
+            return <img src={addCartIcon} className="add-cart" alt="" id={song.id} onClick={() => removeFromCart(song)} />
         } else {
-            return <img src={cartIcon} className="add-cart" alt="" id={song.id} />
+            return <img src={cartIcon} className="add-cart" alt="" onClick={() => addToCart(song)} />
         }
     }
 

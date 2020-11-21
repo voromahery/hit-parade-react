@@ -18,7 +18,6 @@ function AddSong() {
             scoreUp: 0,
             scoreDown: 0,
             favorite: false,
-
         }
 
         setSongs([...songs, newSongs]);

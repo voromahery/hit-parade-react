@@ -68,7 +68,8 @@ Elle veut tout assumer, tout assumer
 Tout assumer, tout assumer
 Oh oh ah
         `,
-        favorite: true
+        favorite: true,
+        price: 1200
     },
     {
         id:9999998690,
@@ -129,6 +130,7 @@ Le gars là c'est un gros parleur (yeah) c'est un gros parleur
 Le gars là c'est un beau parleur, c'est un beau parleur
         `,
         favorite: false,
+        price: 3000,
     }
 ]
 export default data;

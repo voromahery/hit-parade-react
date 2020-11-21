@@ -21,3 +21,7 @@
 .score {
     align-items: center;
 }
+
+.delete {
+    max-width: 24px;
+}
