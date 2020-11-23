@@ -213,6 +213,7 @@ Ramenez-moi la tête, je reste content, passe un tabac
 Qu'est-ce qu'tu m'parles? Dans ta zone, t'es qu'un guetteur
 Ceux qui pensent me connaître me connaissent pas
 Maintenant j'suis rodave comme les bacqueux dans mon secteur
+
 La puissance
 Gros, c'est la puissance, c'est la puissance
 La puissance
@@ -223,6 +224,7 @@ La puissance
 Gros, c'est la puissance, c'est la puissance
 Gros, c'est la puissance, c'est la puissance
 Gros, c'est la puissance, c'est la puissance
+
 Ça revient plus fort, j'suis toujours le même
 C'est moi contre moi, toi tu finis par terre
 Mon bigo sonne, j'suis en mode avion
@@ -230,14 +232,17 @@ Pour qu'j'arrête, faut qu'on m'tranche les cordes vocales
 Ça blesse, MHD, Afro Trap partie 7, le projet est dans les bacs
 J'ai la grinta, tout est bon, oui tout est félé
 La Moula Gang n'oubliera pas
-J'ai rien vu, j'ai rien entendu, j'ai rien dit, mais du sale j'vous promets
+J'ai rien vu, j'ai rien entendu, j'ai rien dit, mais du sale
+j'vous promets
 Tu m'attendais, calmate, j'arrive
 2018, on reprend les hostilités
+
 Ils ont voulu m'boycotte sans y arriver
 Seul Dieu pourra m'en protéger
 Le chemin est long, je compte plus d'ennemis que d'alliés
 J'suis seul, j'ai besoin d'personne, m'man prie pour moi
 Offensive est la guerre, ils l'auront tôt ou tard
+
 La puissance
 Gros, c'est la puissance, c'est la puissance
 La puissance

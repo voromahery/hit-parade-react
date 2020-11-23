@@ -1,4 +1,6 @@
-body {
+body,
+footer,
+main {
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
     margin: auto;
 }
@@ -24,4 +26,13 @@ img {
 
 a:-webkit-any-link {
     text-decoration: none;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    font-family: 'Segoe Print';
+    color: gray;
 }
