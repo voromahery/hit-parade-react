@@ -38,6 +38,7 @@ function AddSong() {
                     <option value="Slow">Slow</option>
                     <option value="Afrotrap">Afrotrap</option>
                     <option value="Kawitry">Kawitry</option>
+                    <option value="Pop">Pop</option>
                 </select>
                 <textarea placeholder="Lyric" name="lyric"></textarea>
                 <button className="add-button">Add</button>

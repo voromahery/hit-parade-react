@@ -11,7 +11,7 @@ function Lyric() {
         <div>
             <div className="lyric-card">
                 <h3>Lyric</h3>
-                <div>{songLyrics.lyric || ["No lyric available!😢"]}</div>
+                <pre>{songLyrics.lyric || ["No lyric available!😢"]}</pre>
             </div>
         </div>
     )

@@ -14,7 +14,7 @@ function SpecSong() {
                 <h1>{`${specificSong.artist}: ${specificSong.title}`}</h1>
                 <div className="lyric-card">
                     <h3>Lyric</h3>
-                    <div>{specificSong.lyric}</div>
+                    <pre>{specificSong.lyric}</pre>
                 </div>
             </div>
         </div>

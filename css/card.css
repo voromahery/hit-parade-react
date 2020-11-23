@@ -1,66 +1,66 @@
 .card-container,
 .card,
 .score {
-    display: flex;
+  display: flex;
 }
 
 .card-container {
-    flex-direction: column;
-    gap: 16px;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .card,
 .lyric-card {
-    background-color: #272343;
-    padding: 32px;
-} 
+  background-color: #272343;
+  padding: 32px;
+}
 
 .lyric-card,
 .style-list {
-    font-weight: 400;
-    border-radius: 5px;
+  font-weight: 400;
+  border-radius: 5px;
 }
 
 .card {
-    align-items: center;
-    justify-content: space-between;
-    max-width: 860px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 860px;
 }
 
 .score {
-    align-items: center;
+  align-items: center;
 }
 
 .score img {
-    padding-left: 16px;
-    padding-right: 16px;
-    max-width: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 16px;
 }
 
-.lyric a:-webkit-any-link ,
-.lyric{
-    width: 24px;
-    height: 24px;
+.lyric a:-webkit-any-link,
+.lyric {
+  width: 24px;
+  height: 24px;
 }
 
 .card a:-webkit-any-link,
 .card,
 .lyric-card {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .style-list {
-    font-size: 32px;
+  font-size: 32px;
 }
 
 .style-list a:-webkit-any-link {
-    color: #000000;
+  color: #000000;
 }
 
 .price {
-    color: #FFD803;
+  color: #ffd803;
 }
 
 .total {
-    color: #BAE8E8;
+  color: #bae8e8;
 }

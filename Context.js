@@ -7,11 +7,6 @@ export default function ContextProvider(props) {
     const [songStyle, setSongStyle] = useState([]);
     const [cartItem, setCartItem] = useState([]);
 
-    function songsDATA() {
-        setSongs(data)
-        // setSongStyle([{style: data.style}]);
-    }
-
     function toggleFavorite(id) {
         const songsArray = songs.map(song => {
             if (song.id === id) {
@@ -27,7 +22,7 @@ export default function ContextProvider(props) {
     }
 
     useEffect(() => {
-        songsDATA();
+        setSongs(data);
     }, [])
 
     // Add item to the cart

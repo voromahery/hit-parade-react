@@ -33868,7 +33868,11 @@ var _reactRouterDom = require("react-router-dom");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Header() {
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade"), /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "header"
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade")), /*#__PURE__*/_react.default.createElement("div", {
     className: "navigation"
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
@@ -33897,7 +33901,7 @@ var data = [{
   style: "Soul",
   scoreUp: 2,
   scoreDown: 0,
-  lyric: "\n        Lionne\nOh oh ah\nUn peu de respect, faut respecter\nQuand une lionne arrive \xE0 tout g\xE9rer\nUn de perdu, mais elle s'est retrouver\nPas besoin d'un homme qui l'emp\xEAche d'avancer\nElle a ses r\xE8gles, et sa fiert\xE9\nC'est pas elle que tu verras mendier\nC\xE9libataire ou femme mari\xE9e\n\xC7a change \xE0 rien sa fa\xE7on de penser\nFort caract\xE8re, elle sait dire non\nElle dit jamais sont dernier mot\nEt tu peux lire sous ces paupi\xE8res \"d\xE9termin\xE9e\"\nElle agit, elle ne parle pas, lionne affam\xE9e\nSi tu lui donnes la mis\xE8re du monde\nElle va tout assumer\nSi tu lui donnes la richesse d'un homme\nElle va tout assumer\nElle mettra toujours la famille d'abord\nElle va tout assumer\nLe genre de femme qui \xE0 chaque probl\xE8me s'en sort\nElle va tout assumer, lionne\nAh, lionne\nCours ma lionne\nAh, lionne\nSois pas na\xEFf\nLa Khaleesie sait tr\xE8s bien comment g\xE9rer sa vie\nCharismatique, elle est sexy\nElle prend soin d'elle malgr\xE9 tous les soucis\nElle prend des risques elle r\xE9fl\xE9chit\nPas besoin de t'd'mander ton avis\nSon objectif, la r\xE9ussite\nSon amour conna\xEEt pas de limite\nFort caract\xE8re, elle sait dire non\nElle dit jamais sont dernier mot\nEt tu peux lire sous ses paupi\xE8res \"d\xE9termin\xE9e\"\nElle agit, elle ne parle pas, lionne affam\xE9e\nSi tu lui donnes la mis\xE8re du monde\nElle va tout assumer\nSi tu lui donnes la richesse d'un homme\nElle va tout assumer\nElle mettra toujours la famille d'abord\nElle va tout assumer\nLe genre de femme qui \xE0 chaque probl\xE8me s'en sort\nElle va tout assumer, lionne\nAh, lionne\nCours ma lionne\nAh, lionne\nElle veut tout assumer, assumer (tout assumer)\nTout assumer, assumer (tout assumer)\nEt toutes les fois o\xF9 elle aurait pu tomber\nElle a jamais pens\xE9 qu'elle pouvait pas y arriver\nAh, lionne\nCours ma lionne\nAh, lionne\nTout assumer, assumer\nTout assumer, assumer\nElle veut tout assumer, tout assumer\nTout assumer, tout assumer\nOh oh ah\n        ",
+  lyric: "\n        [Intro]\n        Lionne\n        Oh oh ah\n        \n        [Couplet 1]\n        Un peu de respect, faut respecter\n        Quand une lionne arrive \xE0 tout g\xE9rer\n        Un de perdu, mais elle sait retrouver\n        Pas besoin d'un homme qui l'emp\xEAche d'avancer\n        Elle a ses r\xE8gles, et sa fiert\xE9\n        C'est pas elle que tu verras mendier\n        C\xE9libataire ou femme mari\xE9e\n        \xC7a ne change \xE0 rien sa fa\xE7on de penser\n        \n        [Pr\xE9-Refrain]\n        Fort caract\xE8re, elle sait dire non\n        Elle dit jamais son dernier mot\n        Et tu peux lire sous ses paupi\xE8res : \"D\xE9termin\xE9e\"\n        Elle agit, elle ne parle pas, lionne affam\xE9e\n        \n        [Refrain]\n        Si tu lui donnes la mis\xE8re du monde, elle va tout assumer\n        Si tu lui donnes la richesse d'un homme, elle va tout assumer\n        Elle mettra toujours la famille d'abord, elle va tout assumer\n        Le genre de femme qui \xE0 chaque probl\xE8me s'en sort, elle va tout assumer\n        Lionne\n        Ah, Lionne\n        Cours ma lionne\n        Ah, Lionne\n            \n        [Couplet 2]\n        Sois pas na\xEFf, la Khaleesi sait tr\xE8s bien comment g\xE9rer sa vie\n        Charismatique, elle est sexy\n        Elle prend soin d'elle malgr\xE9 tous les soucis\n        Elle prend des risques, elle r\xE9fl\xE9chit\n        Pas besoin d'te demander ton avis\n        Son objectif : la r\xE9ussite\n        Son amour ne conna\xEEt pas de limite\n        \n        [Pr\xE9-Refrain]\n        Fort caract\xE8re, elle sait dire non\n        Elle dit jamais son dernier mot\n        Et tu peux lire sous ses paupi\xE8res : \"D\xE9termin\xE9e\"\n        Elle agit, elle ne parle pas, lionne affam\xE9e\n        \n        [Refrain]\n        Si tu lui donnes la mis\xE8re du monde, elle va tout assumer\n        Si tu lui donnes la richesse d'un homme, elle va tout assumer\n        Elle mettra toujours la famille d'abord, elle va tout assumer\n        Le genre de femme qui \xE0 chaque probl\xE8me s'en sort, elle va tout assumer\n        Lionne\n        Ah, Lionne\n        Cours ma lionne\n        Ah, Lionne\n        \n        [Pont]\n        Elle veut tout assumer-ssumer\n        Tout assumer-ssumer\n        Et toutes les fois o\xF9 elle aurait pu tomber\n        Elle a jamais pens\xE9 qu'elle pouvait pas y arriver\n        \n        \n        [Refrain]\n        Ah, Lionne\n        Cours ma lionne\n        Ah, Lionne\n        \n        [Outro]\n        Tout assumer-ssumer\n        Tout assumer-ssumer\n        Elle veut tout assumer, tout assumer\n        Tout assumer, tout assumer\n        Oh oh ah\n        ",
   favorite: true,
   price: 1200
 }, {
@@ -33907,7 +33911,7 @@ var data = [{
   style: "R&B",
   scoreUp: 2,
   scoreDown: 0,
-  lyric: "\n        Djazzi la prod ne t'appartient pas\nLui il nie en bloc\nM\xEAme quand tu l'as grill\xE9, \"c'est pas moi, c'est mes potes!\"\nMais toi tu l'as grill\xE9 (aah)\nC'est le roi de la soir\xE9e\nAttaquant comme Suarez\nLe roi des enfoir\xE9s\nLa pire des esp\xE8ces\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\nJ'te dis l'amour c'est dur, y a des blessures\nAvec son ex, il a trop souffert\nIl connait la proc\xE9dure, il sait y faire\nIl te fera tomber dans son univers\nIl sait qu'il est beau, qu'il est fantastique\nEn soir\xE9e il g\xE8re toutes les gows\nC'est un gars de la street\nEt \xE7a il faut y rem\xE9dier, il en a fait son m\xE9tier\nEt \xE7a il faut y rem\xE9dier, la bataille sera sans r\xE9pit\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\nC'est vraiment une ordure, pr\xEAt \xE0 te trahir\nIl te veut dans son lit et puis c'est fini\nOui c'est vraiment une ordure, dragueur aguerri\nMilitaire dangereux mais sans le treillis\nPour lui c'est une \xE9vidence, une longueur d'avance\nIl fera le mec fragile\nAvec toi \xE7a prend pas, non mais avouez qu'il est agile\nC'est un Casanova, il faut qu'il innove\nSinon il finira game-over\nEn tant que un Casanova, il faut qu'il innove\nNan il est mauvais\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\nC'est trop tard, oui mon gars c'est trop tard\nT'es qu'un beau parleur mais t'as grill\xE9 la main dans le sac, bah ouais\nMais il est trop tard\nT'es qu'un beau parleur\nIl est trop tard, elle t'a mis game-over\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\n        ",
+  lyric: "\nDjazzi la prod ne t'appartient pas\n\nLui il nie en bloc\nM\xEAme quand tu l'as grill\xE9, \"c'est pas moi, c'est mes potes!\"\nMais toi tu l'as grill\xE9 (aah)\nC'est le roi de la soir\xE9e\nAttaquant comme Suarez\nLe roi des enfoir\xE9s\nLa pire des esp\xE8ces\n\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\n\nJ'te dis l'amour c'est dur, y a des blessures\nAvec son ex, il a trop souffert\nIl connait la proc\xE9dure, il sait y faire\nIl te fera tomber dans son univers\nIl sait qu'il est beau, qu'il est fantastique\nEn soir\xE9e il g\xE8re toutes les gows\nC'est un gars de la street\n\nEt \xE7a il faut y rem\xE9dier, il en a fait son m\xE9tier\nEt \xE7a il faut y rem\xE9dier, la bataille sera sans r\xE9pit\n\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\n\nC'est vraiment une ordure, pr\xEAt \xE0 te trahir\nIl te veut dans son lit et puis c'est fini\nOui c'est vraiment une ordure, dragueur aguerri\nMilitaire dangereux mais sans le treillis\nPour lui c'est une \xE9vidence, une longueur d'avance\nIl fera le mec fragile\nAvec toi \xE7a prend pas, non mais avouez qu'il est agile\nC'est un Casanova, il faut qu'il innove\nSinon il finira game-over\nEn tant que un Casanova, il faut qu'il innove\nNan il est mauvais\n\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\n\nC'est trop tard, oui mon gars c'est trop tard\nT'es qu'un beau parleur mais t'as grill\xE9 la main dans le sac, bah ouais\nMais il est trop tard\nT'es qu'un beau parleur\nIl est trop tard, elle t'a mis game-over\n\nLe gars l\xE0 c'est un gros parleur, c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur (yeah) c'est un beau parleur\nLe gars l\xE0 c'est un gros parleur (yeah) c'est un gros parleur\nLe gars l\xE0 c'est un beau parleur, c'est un beau parleur\n        ",
   favorite: false,
   price: 3000
 }, {
@@ -33998,10 +34002,6 @@ function ContextProvider(props) {
       cartItem = _useState6[0],
       setCartItem = _useState6[1];
 
-  function songsDATA() {
-    setSongs(_songData.default); // setSongStyle([{style: data.style}]);
-  }
-
   function toggleFavorite(id) {
     var songsArray = songs.map(function (song) {
       if (song.id === id) {
@@ -34018,7 +34018,7 @@ function ContextProvider(props) {
   }
 
   (0, _react.useEffect)(function () {
-    songsDATA();
+    setSongs(_songData.default);
   }, []); // Add item to the cart
 
   function addToCart(newSong) {
@@ -34087,7 +34087,7 @@ function SongStyle() {
   var _useContext = (0, _react.useContext)(_Context.Context),
       songs = _useContext.songs;
 
-  var _useState = (0, _react.useState)(["Rock", "R&B", "Afrotrap", "Slow", "Kawitry", "Rap", "Soul"]),
+  var _useState = (0, _react.useState)(["Rock", "R&B", "Afrotrap", "Slow", "Kawitry", "Rap", "Soul", "Pop"]),
       _useState2 = _slicedToArray(_useState, 1),
       style = _useState2[0];
 
@@ -34190,7 +34190,9 @@ function AddSong() {
     value: "Afrotrap"
   }, "Afrotrap"), /*#__PURE__*/_react.default.createElement("option", {
     value: "Kawitry"
-  }, "Kawitry")), /*#__PURE__*/_react.default.createElement("textarea", {
+  }, "Kawitry"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Pop"
+  }, "Pop")), /*#__PURE__*/_react.default.createElement("textarea", {
     placeholder: "Lyric",
     name: "lyric"
   }), /*#__PURE__*/_react.default.createElement("button", {
@@ -34552,7 +34554,7 @@ function Lyric() {
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
     className: "lyric-card"
-  }, /*#__PURE__*/_react.default.createElement("h3", null, "Lyric"), /*#__PURE__*/_react.default.createElement("div", null, songLyrics.lyric || ["No lyric available!😢"])));
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "Lyric"), /*#__PURE__*/_react.default.createElement("pre", null, songLyrics.lyric || ["No lyric available!😢"])));
 }
 
 var _default = Lyric;
@@ -34638,7 +34640,7 @@ function SpecSong() {
   console.log(specificSong, songId);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "".concat(specificSong.artist, ": ").concat(specificSong.title)), /*#__PURE__*/_react.default.createElement("div", {
     className: "lyric-card"
-  }, /*#__PURE__*/_react.default.createElement("h3", null, "Lyric"), /*#__PURE__*/_react.default.createElement("div", null, specificSong.lyric))));
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "Lyric"), /*#__PURE__*/_react.default.createElement("pre", null, specificSong.lyric))));
 }
 
 var _default = SpecSong;

@@ -4,6 +4,7 @@
     justify-content: space-between;
 }
 
+.header > a:-webkit-any-link,
 .navigation a:-webkit-any-link {
     color: #272343;
 }
