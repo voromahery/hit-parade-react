@@ -269,5 +269,87 @@ Gros, c'est la puissance, c'est la puissance
 
         `,
     },
+    {
+        id: 574525887849,
+        artist: "MHD",
+        title: "Feeling",
+        style: "Afrotrap",
+        favorite: true,
+        scoreUp: 100,
+        scoreDown: 0,
+        price: 640,
+        lyric: `
+[Couplet 1]
+Le temps passe, j'me rend compte qu'on était fusionnels
+J'vais pas faire de cinéma elle pense à moi et moi je pense à elle
+On y peut rien quand c'est le cœur qui parle
+Un vrai bonhomme quand il se décide il le fait mais ne déçoit pas
+On commet des erreurs mais on prend sur nous
+Elle retrouve le sourire quand on lui parle de moi
+N'écoute pas les autres et laisse moi te guider
+T'as su m'faire confiance quand tout l'monde t'as négligé
+Nos soirées en snap et en coup d'fil
+Une fois dans l'pas c'est net j'peux plus m’en sortir
+S'attacher c'est un sale vice, mais entre nous c'est pas la même
+
+[Refrain 1]
+Car toi et moi y'avait le feeling, oui le feeling
+Me dis pas qu'entre nous ouais, tout est fini, tout est fini
+Tu sais bien qu'entre nous deux, y'avait le feeling, le feeling
+Me dis pas qu'entre nous ouais, tout est fini
+On a besoin d'personne, on se retrouvera devant la mairie
+Et quoi qui se passe, on va finir à deux (feeling)
+Sèche tes larmes, Demain tout ira mieux (feeling)
+Et quoi qui se passe, on va finir à deux (feeling)
+Sèche tes larmes, Demain tout ira mieux
+
+[Couplet 2]
+Le temps passe, mon train d'vie n'est plus l'même
+Toujours en déplacement, on m'voit souvent à l'inter'
+On aménage ensemble, aucun problème de distance
+Du jour au lendemain, la p'tite histoire a pris un tournant
+Allô, allô, quelles sont les nouvelles ?
+Je sais qu'tu vas mal mais qu'tu veux garder l'secret
+Fuis-moi, j'te suivrai, ton yep, c'est mon yep
+J'vais pas t'abandonner, j'ai fait la promesse à ton père
+Les bonnes choses ont une fin, j'me demande si j'te verrai demain
+Foutue maladie, j'ai du mal à l'vivre
+
+[Refrain 2]
+Elle et moi, y'a pas photo, y'avait le feeling, oui le feeling
+Me dis pas qu'entre nous ouais, tout est fini, tout est fini
+Tu sais bien qu'entre nous deux, y'avait le feeling, le feeling
+Me dis pas qu'entre nous ouais, tout est fini
+On a besoin d'personne, on se retrouvera devant la mairie
+Et quoi qui se passe, on va finir à deux (feeling)
+Sèche tes larmes, Demain tout ira mieux (feeling)
+Et quoi qui se passe, on va finir à deux (feeling)
+Sèche tes larmes, Demain tout ira mieux
+
+[Couplet 3]
+Anéantie, elle a plus d'force
+Son cœur ne répond plus malgré les efforts
+T'imagines la mif et les amis
+Les amis du voisinage qui t'ont vu grandir
+Amina he, faut pas nous laisser
+La vie n'est qu'un combat
+Tes bras, faut pas les baisser
+De toi, il me reste encore des souvenirs
+J'ai rien vu venir
+
+[Refrain 3]
+Amina, on avait le feeling, oui le feeling
+Me dis pas qu'entre nous ouais, tout est fini, tout est fini
+Tu sais bien qu'entre nous deux, y'avait le feeling
+Et quoi qui se passe, on va finir à deux (feeling)
+Sèche tes larmes, Demain tout ira mieux (feeling)
+Et quoi qui se passe, on va finir à deux (feeling)
+Sèche tes larmes, Demain tout ira mieux (feeling)
+Et quoi qui se passe, on va finir à deux
+Sèche tes larmes, Demain tout ira mieux
+Et quoi qui se passe, on va finir à deux
+Sèche tes larmes, Demain tout ira mieux
+        `
+    }
 ]
 export default data;

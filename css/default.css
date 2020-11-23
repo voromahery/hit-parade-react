@@ -36,3 +36,8 @@ footer a {
     font-family: 'Segoe Print';
     color: gray;
 }
+pre {
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 27px;
+}

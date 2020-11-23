@@ -36,6 +36,11 @@ footer a {
     font-family: 'Segoe Print';
     color: gray;
 }
+pre {
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 27px;
+}
 .navigation {
     display: flex;
     flex-direction: row;
@@ -114,6 +119,9 @@ footer a {
   color: #bae8e8;
 }
 
+/* @media (min-width: 376px) {
+
+} */
 form {
     display: grid;
     grid-gap: 1rem;

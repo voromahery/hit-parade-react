@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Context } from './../Context';
 import { useParams, Link } from 'react-router-dom';
+import { ImHeadphones } from "react-icons/all";
 
 function Style() {
     const { songs } = useContext(Context);
@@ -11,16 +12,18 @@ function Style() {
         <div>
             <h1>{styleName}</h1>
             <div className="card-container">
-                {styleSong.map(song =>
+                {styleSong.length === 0 ? "No song found!😢😢😢":
+                styleSong.map(song =>
                     <div key={song.id} className="card">
                         <div>
                         <Link to={`/song/${song.id}`}>
-                            <h3>🎧 {song.title}</h3>
+                            <h3><ImHeadphones/> {song.title}</h3>
                             <span>{song.artist}</span>
                             </Link>
                         </div>
                     </div>
-                )}
+                )
+}
             </div>
         </div>
     )
