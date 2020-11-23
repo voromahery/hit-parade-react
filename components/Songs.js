@@ -31,7 +31,7 @@ function Songs({ song, removeScore, addScore }) {
     return (
         <div>
             <div className="card">
-                {addHeartIcon()}
+                {addHeartIcon(song.id)}
                 <div>
                     <Link to={`/song/${song.id}`}>
                         <h3>{song.title}</h3>

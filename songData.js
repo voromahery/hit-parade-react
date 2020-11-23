@@ -7,79 +7,78 @@ const data = [
         scoreUp: 2,
         scoreDown: 0,
         lyric: `
-        [Intro]
-        Lionne
-        Oh oh ah
-        
-        [Couplet 1]
-        Un peu de respect, faut respecter
-        Quand une lionne arrive à tout gérer
-        Un de perdu, mais elle sait retrouver
-        Pas besoin d'un homme qui l'empêche d'avancer
-        Elle a ses règles, et sa fierté
-        C'est pas elle que tu verras mendier
-        Célibataire ou femme mariée
-        Ça ne change à rien sa façon de penser
-        
-        [Pré-Refrain]
-        Fort caractère, elle sait dire non
-        Elle dit jamais son dernier mot
-        Et tu peux lire sous ses paupières : "Déterminée"
-        Elle agit, elle ne parle pas, lionne affamée
-        
-        [Refrain]
-        Si tu lui donnes la misère du monde, elle va tout assumer
-        Si tu lui donnes la richesse d'un homme, elle va tout assumer
-        Elle mettra toujours la famille d'abord, elle va tout assumer
-        Le genre de femme qui à chaque problème s'en sort, elle va tout assumer
-        Lionne
-        Ah, Lionne
-        Cours ma lionne
-        Ah, Lionne
-            
-        [Couplet 2]
-        Sois pas naïf, la Khaleesi sait très bien comment gérer sa vie
-        Charismatique, elle est sexy
-        Elle prend soin d'elle malgré tous les soucis
-        Elle prend des risques, elle réfléchit
-        Pas besoin d'te demander ton avis
-        Son objectif : la réussite
-        Son amour ne connaît pas de limite
-        
-        [Pré-Refrain]
-        Fort caractère, elle sait dire non
-        Elle dit jamais son dernier mot
-        Et tu peux lire sous ses paupières : "Déterminée"
-        Elle agit, elle ne parle pas, lionne affamée
-        
-        [Refrain]
-        Si tu lui donnes la misère du monde, elle va tout assumer
-        Si tu lui donnes la richesse d'un homme, elle va tout assumer
-        Elle mettra toujours la famille d'abord, elle va tout assumer
-        Le genre de femme qui à chaque problème s'en sort, elle va tout assumer
-        Lionne
-        Ah, Lionne
-        Cours ma lionne
-        Ah, Lionne
-        
-        [Pont]
-        Elle veut tout assumer-ssumer
-        Tout assumer-ssumer
-        Et toutes les fois où elle aurait pu tomber
-        Elle a jamais pensé qu'elle pouvait pas y arriver
-        
-        
-        [Refrain]
-        Ah, Lionne
-        Cours ma lionne
-        Ah, Lionne
-        
-        [Outro]
-        Tout assumer-ssumer
-        Tout assumer-ssumer
-        Elle veut tout assumer, tout assumer
-        Tout assumer, tout assumer
-        Oh oh ah
+[Intro]
+Lionne
+Oh oh ah
+
+[Couplet 1]
+Un peu de respect, faut respecter
+Quand une lionne arrive à tout gérer
+Un de perdu, mais elle sait retrouver
+Pas besoin d'un homme qui l'empêche d'avancer
+Elle a ses règles, et sa fierté
+C'est pas elle que tu verras mendier
+Célibataire ou femme mariée
+Ça ne change à rien sa façon de penser
+
+[Pré-Refrain]
+Fort caractère, elle sait dire non
+Elle dit jamais son dernier mot
+Et tu peux lire sous ses paupières : "Déterminée"
+Elle agit, elle ne parle pas, lionne affamée
+
+[Refrain]
+Si tu lui donnes la misère du monde, elle va tout assumer
+Si tu lui donnes la richesse d'un homme, elle va tout assumer
+Elle mettra toujours la famille d'abord, elle va tout assumer
+Le genre de femme qui à chaque problème s'en sort, elle va tout assumer
+Lionne
+Ah, Lionne
+Cours ma lionne
+Ah, Lionne
+
+[Couplet 2]
+Sois pas naïf, la Khaleesi sait très bien comment gérer sa vie
+Charismatique, elle est sexy
+Elle prend soin d'elle malgré tous les soucis
+Elle prend des risques, elle réfléchit
+Pas besoin d'te demander ton avis
+Son objectif : la réussite
+Son amour ne connaît pas de limite
+
+[Pré-Refrain]
+Fort caractère, elle sait dire non
+Elle dit jamais son dernier mot
+Et tu peux lire sous ses paupières : "Déterminée"
+Elle agit, elle ne parle pas, lionne affamée
+
+[Refrain]
+Si tu lui donnes la misère du monde, elle va tout assumer
+Si tu lui donnes la richesse d'un homme, elle va tout assumer
+Elle mettra toujours la famille d'abord, elle va tout assumer
+Le genre de femme qui à chaque problème s'en sort, elle va tout assumer
+Lionne
+Ah, Lionne
+Cours ma lionne
+Ah, Lionne
+
+[Pont]
+Elle veut tout assumer-ssumer
+Tout assumer-ssumer
+Et toutes les fois où elle aurait pu tomber
+Elle a jamais pensé qu'elle pouvait pas y arriver
+
+[Refrain]
+Ah, Lionne
+Cours ma lionne
+Ah, Lionne
+
+[Outro]
+Tout assumer-ssumer
+Tout assumer-ssumer
+Elle veut tout assumer, tout assumer
+Tout assumer, tout assumer
+Oh oh ah
         `,
         favorite: true,
         price: 1200
@@ -164,7 +163,7 @@ Le gars là c'est un beau parleur, c'est un beau parleur
         scoreDown: 0,
         price: 2300,
         lyric: `
-        [Verse 1]
+[Verse 1]
 I'm staring at a broken door
 There's nothing left here anymore
 My room is cold
@@ -269,6 +268,6 @@ La puissance
 Gros, c'est la puissance, c'est la puissance
 
         `,
-    }
+    },
 ]
 export default data;

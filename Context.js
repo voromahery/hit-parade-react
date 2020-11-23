@@ -8,9 +8,10 @@ export default function ContextProvider(props) {
     const [cartItem, setCartItem] = useState([]);
 
     function toggleFavorite(id) {
+         // Recreate a whole new state array
         const songsArray = songs.map(song => {
             if (song.id === id) {
-                // Update this element 
+                // Update the state in an immutable way
                 return {
                     ...song,
                     favorite: !song.favorite,
@@ -18,6 +19,7 @@ export default function ContextProvider(props) {
             };
             return song;
         })
+        // Set it into state
         setSongs(songsArray);
     }
 

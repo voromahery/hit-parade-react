@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { GiMusicalNotes } from "react-icons/all";
 
 function Header() {
   return (
     <div className="header">
       <Link to="/">
-        <h1>Hit Parade</h1>
+        <h1>
+          Hit Parade <GiMusicalNotes />
+        </h1>
       </Link>
       <div className="navigation">
         <Link to="/">
