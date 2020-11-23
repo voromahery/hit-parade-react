@@ -7,14 +7,13 @@ function SpecSong() {
     const { songs } = useContext(Context);
     const { songId } = useParams();
     const specificSong = songs.find(song => song.id === Number(songId)) || data.find(song => song.id === Number(songId));
-    console.log(specificSong, songId);
     return (
         <div>
             <div>
-                <h1>{`${specificSong.artist}: ${specificSong.title}`}</h1>
+                <h1>{`${specificSong.artist || ''}: ${specificSong.title || ''}`}</h1>
                 <div className="lyric-card">
                     <h3>Lyric</h3>
-                    <pre>{specificSong.lyric}</pre>
+                    <pre>{specificSong.lyric || ''}</pre>
                 </div>
             </div>
         </div>

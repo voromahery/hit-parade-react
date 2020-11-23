@@ -17,13 +17,13 @@ function App() {
 				<Route exact path="/">
 					<SongsList />
 				</Route>
-				<Route path="/add">
+				<Route exact path="/add">
 					<AddSong />
 				</Route>
-				<Route path="/cart">
+				<Route exact path="/cart">
 					<CartSong />
 				</Route>
-				<Route path="/lyric/:songLyric">
+				<Route exact path="/lyric/:songLyric">
 					<Lyric />
 				</Route>
 				<Route exact path="/style">
