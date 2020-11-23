@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Context } from '../Context';
 import deleteIcon from '../icons/delete.svg';
 
 function CartSong() {
     const { cartItem, removeFromCart, setCartItem } = useContext(Context);
-    const totalPrice = cartItem.reduce((acc, item) => (acc + item.price),0);
-    
+    const [buttonText, setButtonText] = useState("Buy");
+    const totalPrice = cartItem.reduce((acc, item) => (acc + item.price), 0);
+
     function buySongs() {
+        setButtonText("Buying...")
         setTimeout(() => {
             setCartItem([]);
             if (cartItem.length === 0 || cartItem.length === 1) {
@@ -14,6 +16,7 @@ function CartSong() {
             } else {
                 console.log(`You bought songs for ${totalPrice} Ar`);
             }
+            setButtonText("Buy")
         }, 2000)
     }
 
@@ -26,11 +29,11 @@ function CartSong() {
                         <h3>{cart.title}</h3>
                         <span>{cart.artist}</span>
                     </div>
-                    <span className="price">{cart.price}</span>
+                    <span className="price">{cart.price} Ar</span>
                 </div>)}
             <div>
-                {cartItem.length > 0 && <button onClick={buySongs}>Buy</button>}
-            <h3>Total: {totalPrice}Ar</h3>
+                {cartItem.length > 0 && <button onClick={buySongs}>{buttonText}</button>}
+                <h3>Total: {totalPrice}Ar</h3>
             </div>
         </div>
     )

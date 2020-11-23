@@ -92,6 +92,10 @@ a:-webkit-any-link {
 .style-list a:-webkit-any-link {
     color: #000000;
 }
+
+.price {
+    color: #FFD803;
+}
 form {
     display: grid;
     grid-gap: 1rem;
@@ -104,10 +108,29 @@ form {
     grid-row: 1/5;
 }
 
+
+button {
+    background-color: #FFD803;
+    border: 1px solid #FFD803;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 32px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 textarea,
 input,
 select {
     max-width: 337.14px;
+    background-color: #BAE8E8;
+    border: solid 1px #BAE8E8;
+}
+
+input,
+select {
+    height: 2rem;
+    padding: 1rem;
 }
 
 /*# sourceMappingURL=/css.967bad95.css.map */

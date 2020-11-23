@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Context } from './../Context';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 function Style() {
     const { songs } = useContext(Context);
@@ -14,8 +14,10 @@ function Style() {
                 {styleSong.map(song =>
                     <div key={song.id} className="card">
                         <div>
+                        <Link to={`/song/${song.id}`}>
                             <h3>🎧 {song.title}</h3>
                             <span>{song.artist}</span>
+                            </Link>
                         </div>
                     </div>
                 )}

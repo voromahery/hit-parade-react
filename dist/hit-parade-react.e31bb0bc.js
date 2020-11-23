@@ -34164,7 +34164,8 @@ function AddSong() {
     placeholder: "Price"
   }), /*#__PURE__*/_react.default.createElement("select", {
     className: "style",
-    name: "style"
+    name: "style",
+    placeholder: "Style"
   }, /*#__PURE__*/_react.default.createElement("option", {
     value: ""
   }, "Style"), /*#__PURE__*/_react.default.createElement("option", {
@@ -34436,17 +34437,35 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 function CartSong() {
   var _useContext = (0, _react.useContext)(_Context.Context),
       cartItem = _useContext.cartItem,
       removeFromCart = _useContext.removeFromCart,
       setCartItem = _useContext.setCartItem;
 
+  var _useState = (0, _react.useState)("Buy"),
+      _useState2 = _slicedToArray(_useState, 2),
+      buttonText = _useState2[0],
+      setButtonText = _useState2[1];
+
   var totalPrice = cartItem.reduce(function (acc, item) {
     return acc + item.price;
   }, 0);
 
   function buySongs() {
+    setButtonText("Buying...");
     setTimeout(function () {
       setCartItem([]);
 
@@ -34455,6 +34474,8 @@ function CartSong() {
       } else {
         console.log("You bought songs for ".concat(totalPrice, " Ar"));
       }
+
+      setButtonText("Buy");
     }, 2000);
   }
 
@@ -34474,10 +34495,10 @@ function CartSong() {
       className: "delete"
     }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, cart.title), /*#__PURE__*/_react.default.createElement("span", null, cart.artist)), /*#__PURE__*/_react.default.createElement("span", {
       className: "price"
-    }, cart.price));
+    }, cart.price, " Ar"));
   }), /*#__PURE__*/_react.default.createElement("div", null, cartItem.length > 0 && /*#__PURE__*/_react.default.createElement("button", {
     onClick: buySongs
-  }, "Buy"), /*#__PURE__*/_react.default.createElement("h3", null, "Total: ", totalPrice, "Ar")));
+  }, buttonText), /*#__PURE__*/_react.default.createElement("h3", null, "Total: ", totalPrice, "Ar")));
 }
 
 var _default = CartSong;
@@ -34559,7 +34580,9 @@ function Style() {
     return /*#__PURE__*/_react.default.createElement("div", {
       key: song.id,
       className: "card"
-    }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, "\uD83C\uDFA7 ", song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist)));
+    }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/song/".concat(song.id)
+    }, /*#__PURE__*/_react.default.createElement("h3", null, "\uD83C\uDFA7 ", song.title), /*#__PURE__*/_react.default.createElement("span", null, song.artist))));
   })));
 }
 
@@ -34706,7 +34729,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59139" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61980" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -56,3 +56,7 @@
 .style-list a:-webkit-any-link {
     color: #000000;
 }
+
+.price {
+    color: #FFD803;
+}
