@@ -96,6 +96,10 @@ a:-webkit-any-link {
 .price {
     color: #FFD803;
 }
+
+.total {
+    color: #BAE8E8;
+}
 form {
     display: grid;
     grid-gap: 1rem;

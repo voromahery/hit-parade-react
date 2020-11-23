@@ -33920,6 +33920,16 @@ var data = [{
   scoreDown: 0,
   price: 2300,
   lyric: "\n        [Verse 1]\nI'm staring at a broken door\nThere's nothing left here anymore\nMy room is cold\nIt's making me insane\n\nI've been waiting here so long\nBut now the moment seems to have come\nI see the dark clouds coming up again\n\n[Chorus]\nRunning through the monsoon\nBeyond the world\nTo the end of time\nWhere the rain won't hurt\nFighting the storm\nInto the blue\nAnd when I lose myself I think of you\nTogether we'll be running somewhere new\nThrough the monsoon\nJust me and you\n\n[Verse 2]\nA half-moon\u2019s fading from my sight\nI see your vision in its light\nBut now it's gone and left me so alone\nI know I have to find you now\nCan hear your name, I don't know how\nWhy can't we make this darkness feel like home?\n        "
+}, {
+  id: 5745255321,
+  artist: "MHD",
+  title: "La Puissance",
+  style: "Afrotrap",
+  favorite: true,
+  scoreUp: 7,
+  scoreDown: 0,
+  price: 6000,
+  lyric: "\nLa puissance, que la puissance\nJ'ai pas connu la d\xE9faite depuis mon existence\nGros, j'm'en sors bien, suis-je un miracul\xE9?\nParle en fran\xE7ais, parle en cash ou prends tes distances\nRamenez-moi la t\xEAte, je reste content, passe un tabac\nQu'est-ce qu'tu m'parles? Dans ta zone, t'es qu'un guetteur\nCeux qui pensent me conna\xEEtre me connaissent pas\nMaintenant j'suis rodave comme les bacqueux dans mon secteur\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nGros, c'est la puissance, c'est la puissance\nGros, c'est la puissance, c'est la puissance\n\xC7a revient plus fort, j'suis toujours le m\xEAme\nC'est moi contre moi, toi tu finis par terre\nMon bigo sonne, j'suis en mode avion\nPour qu'j'arr\xEAte, faut qu'on m'tranche les cordes vocales\n\xC7a blesse, MHD, Afro Trap partie 7, le projet est dans les bacs\nJ'ai la grinta, tout est bon, oui tout est f\xE9l\xE9\nLa Moula Gang n'oubliera pas\nJ'ai rien vu, j'ai rien entendu, j'ai rien dit, mais du sale j'vous promets\nTu m'attendais, calmate, j'arrive\n2018, on reprend les hostilit\xE9s\nIls ont voulu m'boycotte sans y arriver\nSeul Dieu pourra m'en prot\xE9ger\nLe chemin est long, je compte plus d'ennemis que d'alli\xE9s\nJ'suis seul, j'ai besoin d'personne, m'man prie pour moi\nOffensive est la guerre, ils l'auront t\xF4t ou tard\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\nLa puissance\nGros, c'est la puissance, c'est la puissance\n\n        "
 }];
 var _default = data;
 exports.default = _default;
@@ -34498,7 +34508,9 @@ function CartSong() {
     }, cart.price, " Ar"));
   }), /*#__PURE__*/_react.default.createElement("div", null, cartItem.length > 0 && /*#__PURE__*/_react.default.createElement("button", {
     onClick: buySongs
-  }, buttonText), /*#__PURE__*/_react.default.createElement("h3", null, "Total: ", totalPrice, "Ar")));
+  }, buttonText), /*#__PURE__*/_react.default.createElement("h3", null, /*#__PURE__*/_react.default.createElement("span", {
+    className: "total"
+  }, "Total:"), " ", totalPrice, "Ar")));
 }
 
 var _default = CartSong;

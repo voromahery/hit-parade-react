@@ -72,7 +72,7 @@ Oh oh ah
         price: 1200
     },
     {
-        id:9999998690,
+        id: 9999998690,
         title: "Beau parleur",
         artist: "Keblack",
         style: "R&B",
@@ -133,8 +133,8 @@ Le gars là c'est un beau parleur, c'est un beau parleur
         price: 3000,
     },
     {
-        id:565431437127,
-        artist:"Hotel Tokyo",
+        id: 565431437127,
+        artist: "Hotel Tokyo",
         title: "Monsoon",
         style: "Rock",
         favorite: true,
@@ -171,6 +171,76 @@ But now it's gone and left me so alone
 I know I have to find you now
 Can hear your name, I don't know how
 Why can't we make this darkness feel like home?
+        `,
+    },
+    {
+        id: 5745255321,
+        artist: "MHD",
+        title: "La Puissance",
+        style: "Afrotrap",
+        favorite: true,
+        scoreUp: 7,
+        scoreDown: 0,
+        price: 6000,
+        lyric: `
+La puissance, que la puissance
+J'ai pas connu la défaite depuis mon existence
+Gros, j'm'en sors bien, suis-je un miraculé?
+Parle en français, parle en cash ou prends tes distances
+Ramenez-moi la tête, je reste content, passe un tabac
+Qu'est-ce qu'tu m'parles? Dans ta zone, t'es qu'un guetteur
+Ceux qui pensent me connaître me connaissent pas
+Maintenant j'suis rodave comme les bacqueux dans mon secteur
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+Gros, c'est la puissance, c'est la puissance
+Gros, c'est la puissance, c'est la puissance
+Ça revient plus fort, j'suis toujours le même
+C'est moi contre moi, toi tu finis par terre
+Mon bigo sonne, j'suis en mode avion
+Pour qu'j'arrête, faut qu'on m'tranche les cordes vocales
+Ça blesse, MHD, Afro Trap partie 7, le projet est dans les bacs
+J'ai la grinta, tout est bon, oui tout est félé
+La Moula Gang n'oubliera pas
+J'ai rien vu, j'ai rien entendu, j'ai rien dit, mais du sale j'vous promets
+Tu m'attendais, calmate, j'arrive
+2018, on reprend les hostilités
+Ils ont voulu m'boycotte sans y arriver
+Seul Dieu pourra m'en protéger
+Le chemin est long, je compte plus d'ennemis que d'alliés
+J'suis seul, j'ai besoin d'personne, m'man prie pour moi
+Offensive est la guerre, ils l'auront tôt ou tard
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+La puissance
+Gros, c'est la puissance, c'est la puissance
+
         `,
     }
 ]

@@ -33,7 +33,7 @@ function CartSong() {
                 </div>)}
             <div>
                 {cartItem.length > 0 && <button onClick={buySongs}>{buttonText}</button>}
-                <h3>Total: {totalPrice}Ar</h3>
+                <h3><span className="total">Total:</span> {totalPrice}Ar</h3>
             </div>
         </div>
     )
