@@ -29,7 +29,8 @@ select {
 }
 
 input,
-select {
+select,
+textarea {
   padding: 8px;
 }
 
@@ -53,7 +54,8 @@ select {
   }
 
   input,
-  select {
+  select,
+  textarea {
     padding: 1rem;
   }
 }
