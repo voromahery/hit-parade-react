@@ -28,7 +28,7 @@ function AddSong() {
     setArtist("");
     setPrice("");
     setLyric("");
-    setStyle("");
+    setStyle([]);
 
     // Update the songs(main state)
     setSongs([...songs, newSongs]);
