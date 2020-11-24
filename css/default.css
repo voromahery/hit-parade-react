@@ -5,6 +5,19 @@ main {
     margin: auto;
 }
 
+body {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 15px
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -16,12 +29,12 @@ ul {
 }
 
 ul .style {
-    font-size: 32px;
+    font-size: 24px;
 }
 
 img {
     cursor: pointer;
-    max-width: 24px;
+    max-width: 20px;
 }
 
 a:-webkit-any-link {
@@ -38,6 +51,29 @@ footer a {
 }
 pre {
     font-family: inherit;
-    font-size: 14px;
-    line-height: 27px;
+    font-size: 8px;
+    line-height: 13px;
+}
+
+@media (min-width: 375px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    ul .style {
+        font-size: 32px;
+    }    
+
+    img {
+        max-width: 24px;
+    }
+
+    pre {
+        font-size: 14px;
+        line-height: 27px;
+    }
 }
